@@ -11,7 +11,7 @@ var adminRouter = require('./routes/pages/admin');    // ROUTER ADMIN PANEL
 
 var app = express();
 process.setMaxListeners(0);
-// view engine setup
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
