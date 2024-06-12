@@ -1,21 +1,24 @@
 const puppeteer = require('puppeteer');
-const settings = require('../settings.js');
-let db = settings.db;
-function checkBlacks(vb, printer){
+const initializeSettings = require('../settings.js');
+
+async function checkBlacks(vb, printer){
+    const settings = await initializeSettings();
+    const { db } = settings;
     if(printer.model == "XEROX"){
-        checkXEROX(vb, printer);
+        checkXEROX(vb, db, printer);
     } else {
-        checkOTHER(vb, printer);
+        checkOTHER(vb, db, printer);
     }
 }
 
-async function checkXEROX(vb, printer) {
+async function checkXEROX(vb, db, printer) {
+
     let date = await data(printer);
     db.query("UPDATE black SET pages = ?, percentage = ?, drum = ?, date = ? WHERE printerID = ?", [vb[4].value, (Math.round((vb[1].value*100)/vb[0].value)), (Math.round((vb[3].value*100)/vb[2].value)), "non trovata", printer.ID]);
     
 }
 
-function checkOTHER(vb, printer) {
+async function checkOTHER(vb, db, printer) {
     db.query("UPDATE black SET percentage = ?, date = ? WHERE printerID = ?", [(Math.round((vb[1].value*100)/vb[0].value)), "non trovata", printer.ID]);
 }
 

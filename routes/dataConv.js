@@ -1,5 +1,7 @@
-const settings = require("./settings.js");
+const initializeSettings = require("./settings.js");
 function dataConv(color, model) {
+    let daysBack = 16;  
+    let veryOld = 60;
     let dayStr; let monthStr;
     let data = [date = "non trovata", bool = 0]
     let year = Math.floor(color / 10000);
@@ -12,7 +14,7 @@ function dataConv(color, model) {
         if (year != 1970) {
             data[0] = dayStr + "/" + monthStr + "/" + year; 
             let date = new Date(year, month-1, day);
-            if (date > Date.now() - (1000 * 60 * 60 * 24 * settings.daysBack)) {
+            if (date > Date.now() - (1000 * 60 * 60 * 24 * daysBack)) {
                 data[1] = 1;
             }
         }
@@ -23,10 +25,10 @@ function dataConv(color, model) {
         if (year != 1970) {
             data[0] = dayStr + "/" + monthStr + "/" + year; 
             let date = new Date(year, month, day);
-            if (date > Date.now() - (1000 * 60 * 60 * 24 * settings.daysBack)) {
+            if (date > Date.now() - (1000 * 60 * 60 * 24 * daysBack)) {
                 data[1] = 1;
             }
-            if (date <  Date.now() - (1000 * 60 * 60 * 24 * settings.veryOld)) {
+            if (date <  Date.now() - (1000 * 60 * 60 * 24 * veryOld)) {
                 data[1] = 2;
             }
 

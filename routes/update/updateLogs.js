@@ -1,8 +1,10 @@
-const settings = require('../settings.js');
+const initializeSettings = require('../settings.js');
 const { format } = require('date-fns');
-let db = settings.db;
+
 
 async function updateLogs(printer, toner, note, type) {
+    const settings = await initializeSettings();
+    const { db } = settings;
     let printerInfo = await db.promise().query("SELECT * FROM printer WHERE ID = " + printer);
     let now = new Date();
     let formattedDate = format(now, 'yyyy-MM-dd HH:mm:ss');

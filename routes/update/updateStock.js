@@ -1,8 +1,10 @@
-const settings = require('../settings.js');
+const initializeSettings = require('../settings.js');
 const updateLogs = require('../update/updateLogs.js');
-let db = settings.db;
 
-function updateStock(req) {
+
+async function updateStock(req) {
+  const settings = await initializeSettings();
+  const { db } = settings;
   let printer = req.body.printerName;
   let action = req.body.tonerAction;
   let toner = req.body.tonerSelection;

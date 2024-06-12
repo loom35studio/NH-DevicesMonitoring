@@ -1,9 +1,10 @@
 const printers = require('./printerList');
-const settings = require("./settings.js");
+const initializeSettings = require("./settings.js");
 
-const below = settings.below;
 
-function generateTxt(printers) {
+
+async function generateTxt(printers) {
+
     let textPrinters = "";
 
     const timeElapsed = Date.now();
@@ -20,7 +21,9 @@ function generateTxt(printers) {
 
 }
 
-function societyDivider(society, printers) {
+async function societyDivider(society, printers) {
+    const settings = await initializeSettings();
+    const { below } = settings;
     let tempText = "";
     let printerName = "";
 

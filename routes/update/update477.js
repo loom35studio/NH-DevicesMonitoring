@@ -1,8 +1,10 @@
 const dataConv = require('../dataConv.js');
-const settings = require('../settings.js');
-let db = settings.db;
+const initializeSettings = require('../settings.js');
 
-function check477(vb, printer) {
+
+async function check477(vb, printer) {
+    const settings = await initializeSettings();
+    const { db } = settings;
     if (printer.model == "477") {
         ye= (Math.round((vb[1].value*69)/vb[0].value))*100;
         ma= (Math.round((vb[3].value*69)/vb[2].value))*100;

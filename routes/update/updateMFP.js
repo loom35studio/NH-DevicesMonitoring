@@ -1,9 +1,11 @@
 const puppeteer = require('puppeteer');
 const dataConv = require('../dataConv.js');
-const settings = require('../settings.js');
-let db = settings.db;
+const initializeSettings = require('../settings.js');
+
 async function checkMFP(vb, printer) {
     let bk, ye, ma, cy;
+    const settings = await initializeSettings();
+    const { db } = settings;
     let dates = await MFPData(printer);
     [ye, yeCh] = dataConv(dates.yellow, printer.model);
     [ma, maCh] = dataConv(dates.magenta, printer.model);
