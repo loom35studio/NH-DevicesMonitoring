@@ -12,9 +12,9 @@ async function generateTxt(printers) {
     textPrinters += "NextHub - Report Stampanti " + today.toLocaleDateString() + "\n\n";
 
     textPrinters += "PEWEX: \n";
-    textPrinters += societyDivider("Pewex", printers);
+    textPrinters += await societyDivider("Pewex", printers);
     textPrinters += "\nELITE: \n";
-    textPrinters += societyDivider("Elite", printers);
+    textPrinters += await societyDivider("Elite", printers);
 
     console.log("File TXT Generato");
     return textPrinters;

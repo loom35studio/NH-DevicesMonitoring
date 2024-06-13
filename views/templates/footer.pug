@@ -25,13 +25,4 @@ div(id="changelog", class= "popup")
                 a(onClick="closePopup('changelog')" class="action_btn")
                     i.fa.fa-times(aria-hidden='true')
         div.popup_body
-            ul
-                each commit in commits
-                    li
-                        strong Data: 
-                        | #{commit.date}
-                        br
-                        strong Update: 
-                        | #{commit.message}
-                        br
-                        br
+            p test
