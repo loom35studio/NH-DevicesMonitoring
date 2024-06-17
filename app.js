@@ -4,6 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const bodyParser = require('body-parser');
+const updateDB = require('./routes/update/updateDB');
+const initializeSettings = require('./routes/settings.js');
 
 var indexRouter = require('./routes/pages/index');    // ROUTER INDEX
 var logsRouter = require('./routes/pages/logs');      // ROUTER LOGS
@@ -57,6 +59,18 @@ const closePoolAndExit = async () => {
     process.exit(1);
   }
 };
+
+
+// DATA UPDATE
+
+timedUpdate();
+async function timedUpdate() {
+    const settings = await initializeSettings();
+    const { interval } = settings;
+
+    updateDB();
+    setInterval(updateDB, interval);
+}
 
 // Gestione dei segnali di terminazione
 process.on('SIGINT', closePoolAndExit);

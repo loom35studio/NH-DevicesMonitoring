@@ -6,14 +6,6 @@ const updateStock = require('../update/updateStock.js');
 const updateDB = require('../update/updateDB'); 
 
 const router = express.Router();
-timedUpdate();
-async function timedUpdate() {
-    const settings = await initializeSettings();
-    const { interval } = settings;
-
-    updateDB();
-    setInterval(updateDB, interval);
-}
 
 router.get('/', async function(req, res, next) {
     let allPrinters = await printerList();
