@@ -7,6 +7,14 @@ h1 {
     padding: 1.5rem 0;
 }
 
+h4 {
+    text-transform: uppercase;
+    font-size: var(--fs-subtitle);
+    font-weight: 700;
+    color:  #010c25;
+    padding: 1.5rem 0;
+}
+
 .color { width: 15px; height: 15px; margin-right: 5px; }
 .ye { background-color: var(--ye); }
 .ma { background-color: var(--ma); }
@@ -86,4 +94,12 @@ select, input{
     border: 1px solid #c2c7d4;
     color: #4E535F;
     margin-bottom: 15px;
+}
+
+input[type="radio"] {
+    width: auto;
+    margin: 0px;
+}
+input[type="radio"] label{
+    margin-right: 5px;
 }

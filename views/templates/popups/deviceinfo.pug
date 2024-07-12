@@ -1,0 +1,18 @@
+block deviceinfo
+  div(id= 'info-'+prnt[0].ID, class= "popup")
+    div.popup_content
+      div.popup_header
+        div.popup_header_title
+          h2.popup_header_title_title INFORMAZIONI STAMPANTE
+          h3.popup_header_sub= prnt[0].name
+        div.popup_header_action_btn
+          a(onClick='closePopup('+"'"+'info-'+prnt[0].ID+"'"+')' class="action_btn")
+            i.fa.fa-times(aria-hidden='true')
+        
+      form(class="popup_form")
+        div.popup_form_action
+          h3.popup_form_action_title= "Societá: "+prnt[0].society
+          h3.popup_form_action_title= "Indirizzo IP: "+prnt[0].ip
+          h3.popup_form_action_title= "Modello: "+prnt[0].model
+
+          a(href='https://' + prnt[0].ip, target="_blank", class="btn") Pannello

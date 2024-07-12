@@ -1,22 +1,40 @@
 const express = require('express');
-const initializeSettings = require('../settings.js');
-const printerList = require("../printerList.js");
 const generateTxt = require('../generateTxt.js');
-const updateStock = require('../update/updateStock.js');
-const updateDB = require('../update/updateDB'); 
+const updateStock = require('../devices/update/updateStock.js');
+const fs = require('fs').promises;
 
 const router = express.Router();
 
 router.get('/', async function(req, res, next) {
-    let allPrinters = await printerList();
-    let textPrinters = await generateTxt(allPrinters);
+    try {
+        let deviceList; let textPrinters;
+        
+        try {
+            const data = await fs.readFile('printers.json', 'utf8');
+            deviceList = JSON.parse(data);
+        } catch (err) {
+            console.log('Errore durante la lettura del file', err);
+            return next(err);
+        }
 
-    res.render('index', { printer: allPrinters, txt: textPrinters});
+        textPrinters = await generateTxt(deviceList);
+
+        res.render('index', { printer: deviceList, txt: textPrinters});
+    } catch (error) {
+        console.error("Errore nella gestione della rotta /:", error);
+        next(error);
+    }
 });
 
 router.post('/', async function(req, res, next) {
-    updateStock(req);
-    res.redirect('/#device-' + req.body.printerName);
+    try {
+        await updateStock(req);
+        res.redirect('/');
+        // res.redirect('/#device-' + req.body.printerName);
+    } catch (error) {
+        console.error("Errore durante l'aggiornamento dello stock:", error);
+        next(error);
+    }
 });
 
 

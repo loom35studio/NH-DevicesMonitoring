@@ -1,11 +1,9 @@
 extends layout
 block content
-  header
+  div.container
     h1 Lista Stampanti
   div.container
-    div.device_tabs
-
-    h1 Pewex
+    h4 Pewex
     div.device_container
       each prnt in printer
         if prnt[0].society == "Pewex"
@@ -20,7 +18,7 @@ block content
           else if prnt[0].model == "OTHER"
             include templates/printers/other
           
-    h1 Elite
+    h4 Elite
     divc.device_container
       each prnt in printer
         if prnt[0].society == "Elite"
@@ -34,4 +32,15 @@ block content
             include templates/printers/xerox
           else if prnt[0].model == "OTHER"
             include templates/printers/other
-          
+        
+    script.
+        window.addEventListener('beforeunload', () => {
+            localStorage.setItem('scrollPosition', window.scrollY);
+        });
+
+        window.addEventListener('load', () => {
+            const scrollPosition = localStorage.getItem('scrollPosition');
+            if (scrollPosition) {
+                window.scrollTo(0, parseInt(scrollPosition, 10));
+            }
+        });

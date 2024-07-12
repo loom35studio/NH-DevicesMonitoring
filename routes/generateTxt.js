@@ -1,10 +1,6 @@
-const printers = require('./printerList');
 const initializeSettings = require("./settings.js");
 
-
-
 async function generateTxt(printers) {
-
     let textPrinters = "";
 
     const timeElapsed = Date.now();
@@ -18,7 +14,6 @@ async function generateTxt(printers) {
 
     console.log("File TXT Generato");
     return textPrinters;
-
 }
 
 async function societyDivider(society, printers) {
@@ -26,6 +21,7 @@ async function societyDivider(society, printers) {
     const { below } = settings;
     let tempText = "";
     let printerName = "";
+    console.log(below);
 
     printers.forEach(prnt => {
         if(prnt[0].society == society) {
@@ -100,28 +96,13 @@ async function societyDivider(society, printers) {
     return tempText;
 }
 
-function tabsCalculator(name){
-    let tabsNumber = name.length;
-    let tabs = "";
-    switch (true) {
-      case tabsNumber < 8:
-        tabs = "\t\t\t";
-        break;
-      case tabsNumber < 16:
-        tabs = "\t\t";
-        break;
-      case tabsNumber < 24:
-        tabs = "\t";
-        break;
-      case tabsNumber < 32:
-        tabs = " ";
-        break;
-      case tabsNumber > 32:
-        tabs = " ";
-        break;
-    }
-    return tabs;
-  };
+function tabsCalculator(name) {
+    const tabsNumber = name.length;
+    if (tabsNumber < 8) return "\t\t\t";
+    if (tabsNumber < 16) return "\t\t";
+    if (tabsNumber < 24) return "\t";
+    return " ";
+}
 
   
 module.exports = generateTxt;

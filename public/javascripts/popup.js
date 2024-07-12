@@ -8,19 +8,6 @@ function closePopup(id) {
     popup.classList.remove("opened");
 }
 
-function updateStock(id){
-    var sel = document.getElementById("selectedAction");
-    
-    if (sel.value == "remove") {
-        
-    } else if (sel.value == "insert") {
-
-    }
-    
-    console.log(sel.value);
-}
-
-
 function reloadPopup(id) {
     closePopup(id); 
     location.reload(true);

@@ -4,19 +4,19 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const bodyParser = require('body-parser');
-const updateDB = require('./routes/update/updateDB');
-const initializeSettings = require('./routes/settings.js');
+
 
 var indexRouter = require('./routes/pages/index');    // ROUTER INDEX
 var logsRouter = require('./routes/pages/logs');      // ROUTER LOGS
 var adminRouter = require('./routes/pages/admin');    // ROUTER ADMIN PANEL
+
+const timedUpdate = require('./routes/schedule.js');
 
 var app = express();
 process.setMaxListeners(0);
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
-
 app.use(logger('dev'));
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -44,7 +44,6 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-
 // Funzione per chiudere il pool di connessioni
 const closePoolAndExit = async () => {
   try {
@@ -59,18 +58,6 @@ const closePoolAndExit = async () => {
     process.exit(1);
   }
 };
-
-
-// DATA UPDATE
-
-timedUpdate();
-async function timedUpdate() {
-    const settings = await initializeSettings();
-    const { interval } = settings;
-
-    updateDB();
-    setInterval(updateDB, interval);
-}
 
 // Gestione dei segnali di terminazione
 process.on('SIGINT', closePoolAndExit);

@@ -1,28 +1,32 @@
 const express = require('express');
-const router = express.Router();
-const printerList = require('../printerList.js');
 const generateTxt = require('../generateTxt.js');
 const initializeSettings = require('../settings.js');
+const fs = require('fs').promises;
+
+const router = express.Router();
 
 router.get('/', async function(req, res, next) {
     try {
+        let deviceList; let textPrinters; let logs;
         const settings = await initializeSettings();
         const { db } = settings;
-        // Recupera l'elenco di tutte le stampanti
-        let allPrinters = await printerList();
+    
+        try {
+            const data = await fs.readFile('printers.json', 'utf8');
+            deviceList = JSON.parse(data);
+        } catch (err) {
+            console.log('Errore durante la lettura del file', err);
+            return next(err);
+        }
         
-        // Genera il testo delle stampanti
-        let textPrinters = await generateTxt(allPrinters);
+        textPrinters = await generateTxt(deviceList);
+        logs = await db.promise().query("SELECT * FROM logs");
 
-        // Recupera i log dal database
-        let logs = await db.promise().query("SELECT * FROM logs");
-        
-        // Renderizza la pagina con i dati raccolti
-        res.render('logs', { printer: allPrinters, txt: textPrinters, log: logs });
+        res.render('logs', { printer: deviceList, txt: textPrinters, log: logs });
 
     } catch (error) {
         console.error("Errore nella gestione della rotta /:", error);
-        next(error); // Passa l'errore al middleware di gestione degli errori
+        next(error);
     }
 });
 router.post('/', async function(req, res, next) {

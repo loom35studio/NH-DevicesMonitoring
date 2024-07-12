@@ -1,4 +1,5 @@
 const initializeSettings = require("./settings.js");
+
 function dataConv(color, model) {
     let daysBack = 16;  
     let veryOld = 60;
