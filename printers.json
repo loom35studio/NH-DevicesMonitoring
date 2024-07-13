@@ -14,7 +14,7 @@
       "pages": 500,
       "percentage": 7,
       "date": "05/02/2023",
-      "stock": 1,
+      "stock": 4,
       "changed": 2,
       "printerID": 1
     },
@@ -1941,7 +1941,7 @@
       "pages": 6000,
       "percentage": 87,
       "date": "09/07/2024",
-      "stock": 70,
+      "stock": 80,
       "changed": 1,
       "printerID": 42
     },
