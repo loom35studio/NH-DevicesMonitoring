@@ -71,6 +71,5 @@ async function initializeSettings() {
       interval: settings.interval
   };
 }
-
 module.exports = initializeSettings;
  

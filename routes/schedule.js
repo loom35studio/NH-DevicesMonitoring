@@ -21,7 +21,7 @@ async function timedUpdate() {
         console.log(`✅ Fine update lista device: ${new Date().toISOString()}`);
         console.log(`🕒 Durata dell'aggiornamento: ${endTime - startTime}ms`);
         console.log('------------------------------------------------');
-        setTimeout(timedUpdate, 0);
+        setTimeout(timedUpdate, interval);
     }
 }
 
