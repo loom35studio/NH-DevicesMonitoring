@@ -8,7 +8,8 @@ const router = express.Router();
 
 router.get('/', async function(req, res, next) {
     try {
-        let deviceList; let textPrinters;
+        let deviceList; 
+        let textPrinters;
 
         try {
             const data = await fs.readFile('printers.json', 'utf8');
@@ -18,8 +19,29 @@ router.get('/', async function(req, res, next) {
             return next(err);
         }
 
+        const sortByName = (devices) => {
+            return devices.sort((a, b) => {
+                const nameA = a[0].name.toUpperCase();
+                const nameB = b[0].name.toUpperCase();
+                if (nameA < nameB) {
+                    return -1;
+                }
+                if (nameA > nameB) {
+                    return 1;
+                }
+                return 0;
+            });
+        };
+
+        deviceList = sortByName(deviceList);
+
+        const generateTxt = async (devices) => {
+            // Implementa la logica per generare textPrinters
+            return 'Testo generato';
+        };
+
         textPrinters = await generateTxt(deviceList);
-        res.render('index', { printer: deviceList, txt: textPrinters});
+        res.render('index', { printer: deviceList, txt: textPrinters });
     } catch (error) {
         console.error("Errore nella gestione della rotta /:", error);
         next(error);

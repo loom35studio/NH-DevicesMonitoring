@@ -7,6 +7,17 @@ const checkMFP = require('../models/MFP.js');
 const checkXEROX = require('../models/XEROX.js');
 const checkOTHER = require('../models/OTHER.js');
 
+const options = {
+    timeout: 5000,  // Timeout in millisecondi
+    retries: 1,     // Numero di tentativi
+    transport: "udp4",  // Tipo di trasporto
+    trapPort: 162,  // Porta per le trap SNMP
+    version: snmp.Version1, // Versione SNMP
+    idBitsSize: 32,
+    debug: true  // Attiva il debug
+};
+
+
 async function updateDevicesOnDB() {
     let printersOnline = 0;
     const settings = await initializeSettings();
@@ -21,7 +32,7 @@ async function updateDevicesOnDB() {
         let updatePromises = printers.map(printer => {
             return new Promise((resolve, reject) => {
                 let oids = getOids(printer);
-                let session = snmp.createSession(printer.ip, "public");
+                let session = snmp.createSession(printer.ip, 'public', options);
 
                 const closeSession = () => {
                     if (session) {
@@ -40,6 +51,7 @@ async function updateDevicesOnDB() {
                             check(vb, printer);
                         }
                     } catch (e) {
+                        console.log(printer + e);
                         await connection.query("UPDATE printer SET error = ? WHERE ID = ?", [1, printer.ID]);
                     } finally {
                         closeSession();

@@ -1,16 +1,17 @@
+require('dotenv').config()
 const mysql = require("mysql2");
 const fs = require('fs').promises;
 
 let db = mysql.createPool({
     multipleStatements: true,
-    host: "localhost",
-    user: "root",
-    password: 'Kulo123!',
-    database: "nh_printchecker",
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PSW,
+    database: process.env.DB_NAME,
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0,
-    idleTimeout: 10 // Chiude le connessioni dopo 60 secondi di inattività
+    idleTimeout: 10
 });
 
 async function takeSettings(db) {

@@ -7,7 +7,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.66.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 1,
@@ -38,8 +38,8 @@
     },
     {
       "ID": 1,
-      "pages": 4500,
-      "percentage": 45,
+      "pages": 4400,
+      "percentage": 44,
       "date": "06/05/2024",
       "stock": 0,
       "changed": 2,
@@ -54,7 +54,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.68.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 2,
@@ -101,7 +101,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.168.116",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 3,
@@ -148,7 +148,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.168.118",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 4,
@@ -195,7 +195,7 @@
       "model": "MFP",
       "drum": null,
       "ip": "10.0.13.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 5,
@@ -218,7 +218,7 @@
     {
       "ID": 5,
       "pages": 4600,
-      "percentage": 67,
+      "percentage": 66,
       "date": "08/02/2024",
       "stock": 0,
       "changed": 0,
@@ -227,7 +227,7 @@
     {
       "ID": 5,
       "pages": 2200,
-      "percentage": 26,
+      "percentage": 25,
       "date": "29/05/2024",
       "stock": 0,
       "changed": 0,
@@ -242,12 +242,12 @@
       "model": "MFP",
       "drum": null,
       "ip": "10.0.15.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 6,
-      "pages": 5000,
-      "percentage": 72,
+      "pages": 4900,
+      "percentage": 71,
       "date": "15/12/2023",
       "stock": 0,
       "changed": 0,
@@ -255,8 +255,8 @@
     },
     {
       "ID": 6,
-      "pages": 5000,
-      "percentage": 72,
+      "pages": 4900,
+      "percentage": 71,
       "date": "15/12/2023",
       "stock": 0,
       "changed": 0,
@@ -264,8 +264,8 @@
     },
     {
       "ID": 6,
-      "pages": 5000,
-      "percentage": 72,
+      "pages": 4900,
+      "percentage": 71,
       "date": "15/12/2023",
       "stock": 0,
       "changed": 0,
@@ -273,8 +273,8 @@
     },
     {
       "ID": 6,
-      "pages": 7500,
-      "percentage": 87,
+      "pages": 7400,
+      "percentage": 86,
       "date": "03/07/2024",
       "stock": 0,
       "changed": 1,
@@ -289,7 +289,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.46.47",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 7,
@@ -320,8 +320,8 @@
     },
     {
       "ID": 7,
-      "pages": 9700,
-      "percentage": 97,
+      "pages": 9600,
+      "percentage": 96,
       "date": "08/07/2024",
       "stock": 0,
       "changed": 1,
@@ -336,12 +336,12 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.14.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 8,
-      "pages": 6300,
-      "percentage": 91,
+      "pages": 6200,
+      "percentage": 90,
       "date": "01/07/2024",
       "stock": 1,
       "changed": 1,
@@ -359,7 +359,7 @@
     {
       "ID": 8,
       "pages": 3500,
-      "percentage": 51,
+      "percentage": 50,
       "date": "22/01/2024",
       "stock": 0,
       "changed": 2,
@@ -367,8 +367,8 @@
     },
     {
       "ID": 8,
-      "pages": 4900,
-      "percentage": 49,
+      "pages": 4700,
+      "percentage": 47,
       "date": "17/06/2024",
       "stock": 1,
       "changed": 0,
@@ -383,12 +383,12 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.60.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 9,
-      "pages": 3400,
-      "percentage": 49,
+      "pages": 3300,
+      "percentage": 48,
       "date": "11/03/2024",
       "stock": 0,
       "changed": 2,
@@ -405,8 +405,8 @@
     },
     {
       "ID": 9,
-      "pages": 4900,
-      "percentage": 71,
+      "pages": 4800,
+      "percentage": 70,
       "date": "11/03/2024",
       "stock": 0,
       "changed": 2,
@@ -430,7 +430,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.73.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 10,
@@ -477,12 +477,12 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.72.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 11,
       "pages": 1000,
-      "percentage": 15,
+      "percentage": 14,
       "date": "03/12/2019",
       "stock": 1,
       "changed": 2,
@@ -571,16 +571,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.75.46",
-      "error": 1
-    },
-    {
-      "ID": 13,
-      "pages": 3100,
-      "percentage": 45,
-      "date": "27/08/2023",
-      "stock": 0,
-      "changed": 2,
-      "printerID": 13
+      "error": 0
     },
     {
       "ID": 13,
@@ -593,8 +584,8 @@
     },
     {
       "ID": 13,
-      "pages": 3300,
-      "percentage": 48,
+      "pages": 3000,
+      "percentage": 43,
       "date": "27/08/2023",
       "stock": 0,
       "changed": 2,
@@ -602,8 +593,17 @@
     },
     {
       "ID": 13,
-      "pages": 7900,
-      "percentage": 79,
+      "pages": 3200,
+      "percentage": 47,
+      "date": "27/08/2023",
+      "stock": 0,
+      "changed": 2,
+      "printerID": 13
+    },
+    {
+      "ID": 13,
+      "pages": 7700,
+      "percentage": 77,
       "date": "24/06/2024",
       "stock": 0,
       "changed": 0,
@@ -618,7 +618,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.74.47",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 14,
@@ -665,7 +665,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.74.48",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 15,
@@ -712,7 +712,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.10.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 16,
@@ -743,8 +743,8 @@
     },
     {
       "ID": 16,
-      "pages": 5800,
-      "percentage": 58,
+      "pages": 5700,
+      "percentage": 57,
       "date": "27/05/2024",
       "stock": 1,
       "changed": 0,
@@ -759,7 +759,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.59.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 17,
@@ -790,8 +790,8 @@
     },
     {
       "ID": 17,
-      "pages": 1000,
-      "percentage": 10,
+      "pages": 900,
+      "percentage": 9,
       "date": "13/05/2024",
       "stock": 0,
       "changed": 2,
@@ -806,7 +806,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.57.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 18,
@@ -837,8 +837,8 @@
     },
     {
       "ID": 18,
-      "pages": 2600,
-      "percentage": 26,
+      "pages": 2400,
+      "percentage": 24,
       "date": "13/05/2024",
       "stock": 0,
       "changed": 2,
@@ -853,7 +853,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.27.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 19,
@@ -866,8 +866,8 @@
     },
     {
       "ID": 19,
-      "pages": 1900,
-      "percentage": 27,
+      "pages": 1800,
+      "percentage": 26,
       "date": "17/09/2023",
       "stock": 1,
       "changed": 2,
@@ -884,11 +884,11 @@
     },
     {
       "ID": 19,
-      "pages": 300,
-      "percentage": 3,
-      "date": "20/05/2024",
+      "pages": 9900,
+      "percentage": 99,
+      "date": "08/07/2024",
       "stock": 0,
-      "changed": 0,
+      "changed": 1,
       "printerID": 19
     }
   ],
@@ -900,7 +900,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.76.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 20,
@@ -931,8 +931,8 @@
     },
     {
       "ID": 20,
-      "pages": 7600,
-      "percentage": 76,
+      "pages": 7500,
+      "percentage": 75,
       "date": "24/06/2024",
       "stock": 0,
       "changed": 0,
@@ -947,7 +947,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.26.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 21,
@@ -978,8 +978,8 @@
     },
     {
       "ID": 21,
-      "pages": 8200,
-      "percentage": 82,
+      "pages": 8000,
+      "percentage": 80,
       "date": "01/07/2024",
       "stock": 0,
       "changed": 1,
@@ -994,7 +994,7 @@
       "model": "OTHER",
       "drum": null,
       "ip": "192.168.168.135",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 22,
@@ -1026,7 +1026,7 @@
     {
       "ID": 22,
       "pages": null,
-      "percentage": 48,
+      "percentage": 47,
       "date": "non trovata",
       "stock": 0,
       "changed": 0,
@@ -1041,7 +1041,7 @@
       "model": "OTHER",
       "drum": null,
       "ip": "192.168.168.53",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 23,
@@ -1073,7 +1073,7 @@
     {
       "ID": 23,
       "pages": null,
-      "percentage": 3,
+      "percentage": 2,
       "date": "non trovata",
       "stock": 0,
       "changed": 0,
@@ -1088,7 +1088,7 @@
       "model": "OTHER",
       "drum": null,
       "ip": "10.0.43.47",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 24,
@@ -1135,7 +1135,7 @@
       "model": "OTHER",
       "drum": null,
       "ip": "10.0.43.48",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 25,
@@ -1182,7 +1182,7 @@
       "model": "OTHER",
       "drum": null,
       "ip": "10.0.50.47",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 26,
@@ -1229,7 +1229,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.41.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 27,
@@ -1242,8 +1242,8 @@
     },
     {
       "ID": 27,
-      "pages": 3900,
-      "percentage": 56,
+      "pages": 3800,
+      "percentage": 55,
       "date": "03/12/2022",
       "stock": 0,
       "changed": 2,
@@ -1260,8 +1260,8 @@
     },
     {
       "ID": 27,
-      "pages": 9400,
-      "percentage": 94,
+      "pages": 9300,
+      "percentage": 93,
       "date": "01/07/2024",
       "stock": 0,
       "changed": 1,
@@ -1276,7 +1276,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.35.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 28,
@@ -1307,8 +1307,8 @@
     },
     {
       "ID": 28,
-      "pages": 6700,
-      "percentage": 67,
+      "pages": 6600,
+      "percentage": 66,
       "date": "non trovata",
       "stock": 1,
       "changed": 0,
@@ -1323,7 +1323,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.78.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 29,
@@ -1354,8 +1354,8 @@
     },
     {
       "ID": 29,
-      "pages": 6700,
-      "percentage": 67,
+      "pages": 6600,
+      "percentage": 66,
       "date": "12/11/2023",
       "stock": 0,
       "changed": 2,
@@ -1370,7 +1370,7 @@
       "model": "XEROX",
       "drum": null,
       "ip": "192.168.168.163",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 30,
@@ -1417,7 +1417,7 @@
       "model": "XEROX",
       "drum": null,
       "ip": "192.168.168.82",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 31,
@@ -1464,7 +1464,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.80.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 32,
@@ -1511,7 +1511,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.63.10",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 33,
@@ -1542,8 +1542,8 @@
     },
     {
       "ID": 33,
-      "pages": 9500,
-      "percentage": 95,
+      "pages": 9000,
+      "percentage": 90,
       "date": "08/07/2024",
       "stock": 0,
       "changed": 1,
@@ -1558,7 +1558,7 @@
       "model": "MFP",
       "drum": null,
       "ip": "192.168.168.69",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 34,
@@ -1605,7 +1605,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.168.70",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 35,
@@ -1652,7 +1652,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.17.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 36,
@@ -1683,8 +1683,8 @@
     },
     {
       "ID": 36,
-      "pages": 5800,
-      "percentage": 58,
+      "pages": 5700,
+      "percentage": 57,
       "date": "03/06/2024",
       "stock": 1,
       "changed": 0,
@@ -1699,7 +1699,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.81.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 37,
@@ -1730,8 +1730,8 @@
     },
     {
       "ID": 37,
-      "pages": 1700,
-      "percentage": 17,
+      "pages": 1600,
+      "percentage": 16,
       "date": "13/05/2024",
       "stock": 0,
       "changed": 2,
@@ -1746,7 +1746,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.82.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 38,
@@ -1793,7 +1793,7 @@
       "model": "OTHER",
       "drum": null,
       "ip": "192.168.168.138",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 39,
@@ -1840,12 +1840,12 @@
       "model": "MFP",
       "drum": null,
       "ip": "10.0.29.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 40,
-      "pages": 4300,
-      "percentage": 62,
+      "pages": 4200,
+      "percentage": 61,
       "date": "23/10/2023",
       "stock": 0,
       "changed": 0,
@@ -1853,8 +1853,8 @@
     },
     {
       "ID": 40,
-      "pages": 4300,
-      "percentage": 62,
+      "pages": 4200,
+      "percentage": 61,
       "date": "23/10/2023",
       "stock": 0,
       "changed": 0,
@@ -1862,8 +1862,8 @@
     },
     {
       "ID": 40,
-      "pages": 4300,
-      "percentage": 62,
+      "pages": 4200,
+      "percentage": 61,
       "date": "23/10/2023",
       "stock": 0,
       "changed": 0,
@@ -1871,8 +1871,8 @@
     },
     {
       "ID": 40,
-      "pages": 8600,
-      "percentage": 100,
+      "pages": 8300,
+      "percentage": 97,
       "date": "12/07/2024",
       "stock": 0,
       "changed": 1,
@@ -1887,7 +1887,7 @@
       "model": "MFP",
       "drum": null,
       "ip": "10.0.51.49",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 41,
@@ -1910,7 +1910,7 @@
     {
       "ID": 41,
       "pages": 2100,
-      "percentage": 31,
+      "percentage": 30,
       "date": "05/01/2024",
       "stock": 1,
       "changed": 0,
@@ -1918,8 +1918,8 @@
     },
     {
       "ID": 41,
-      "pages": 1000,
-      "percentage": 12,
+      "pages": 900,
+      "percentage": 10,
       "date": "20/05/2024",
       "stock": 0,
       "changed": 0,
@@ -1934,12 +1934,12 @@
       "model": "MFP",
       "drum": null,
       "ip": "192.168.16.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 42,
-      "pages": 6000,
-      "percentage": 87,
+      "pages": 5700,
+      "percentage": 83,
       "date": "09/07/2024",
       "stock": 86,
       "changed": 1,
@@ -1947,8 +1947,8 @@
     },
     {
       "ID": 42,
-      "pages": 6500,
-      "percentage": 94,
+      "pages": 6200,
+      "percentage": 90,
       "date": "10/07/2024",
       "stock": 1,
       "changed": 1,
@@ -1956,8 +1956,8 @@
     },
     {
       "ID": 42,
-      "pages": 6900,
-      "percentage": 100,
+      "pages": 6700,
+      "percentage": 97,
       "date": "12/07/2024",
       "stock": 0,
       "changed": 1,
@@ -1965,8 +1965,8 @@
     },
     {
       "ID": 42,
-      "pages": 4500,
-      "percentage": 52,
+      "pages": 4000,
+      "percentage": 47,
       "date": "01/07/2024",
       "stock": 4,
       "changed": 1,
@@ -1981,12 +1981,12 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.101.44",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 43,
-      "pages": 800,
-      "percentage": 11,
+      "pages": 600,
+      "percentage": 8,
       "date": "10/06/2024",
       "stock": 3,
       "changed": 0,
@@ -1995,7 +1995,7 @@
     {
       "ID": 43,
       "pages": 1700,
-      "percentage": 25,
+      "percentage": 24,
       "date": "27/05/2024",
       "stock": 2,
       "changed": 0,
@@ -2003,8 +2003,8 @@
     },
     {
       "ID": 43,
-      "pages": 1700,
-      "percentage": 25,
+      "pages": 1600,
+      "percentage": 23,
       "date": "27/05/2024",
       "stock": 2,
       "changed": 0,
@@ -2012,11 +2012,11 @@
     },
     {
       "ID": 43,
-      "pages": 400,
-      "percentage": 4,
-      "date": "10/06/2024",
+      "pages": 9700,
+      "percentage": 97,
+      "date": "08/07/2024",
       "stock": 0,
-      "changed": 0,
+      "changed": 1,
       "printerID": 43
     }
   ],
@@ -2028,12 +2028,12 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.101.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 44,
-      "pages": 6300,
-      "percentage": 91,
+      "pages": 6200,
+      "percentage": 90,
       "date": "27/05/2024",
       "stock": 2,
       "changed": 0,
@@ -2059,8 +2059,8 @@
     },
     {
       "ID": 44,
-      "pages": 5300,
-      "percentage": 53,
+      "pages": 5100,
+      "percentage": 51,
       "date": "17/12/2023",
       "stock": 0,
       "changed": 2,
@@ -2075,12 +2075,12 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.102.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 45,
-      "pages": 3900,
-      "percentage": 57,
+      "pages": 3800,
+      "percentage": 55,
       "date": "24/06/2024",
       "stock": 1,
       "changed": 0,
@@ -2088,8 +2088,8 @@
     },
     {
       "ID": 45,
-      "pages": 5700,
-      "percentage": 83,
+      "pages": 5600,
+      "percentage": 81,
       "date": "01/07/2024",
       "stock": 0,
       "changed": 1,
@@ -2097,8 +2097,8 @@
     },
     {
       "ID": 45,
-      "pages": 5400,
-      "percentage": 78,
+      "pages": 5300,
+      "percentage": 77,
       "date": "24/06/2024",
       "stock": 1,
       "changed": 0,
@@ -2106,8 +2106,8 @@
     },
     {
       "ID": 45,
-      "pages": 600,
-      "percentage": 6,
+      "pages": 300,
+      "percentage": 3,
       "date": "03/06/2024",
       "stock": 1,
       "changed": 0,
@@ -2122,12 +2122,12 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.103.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 46,
-      "pages": 3100,
-      "percentage": 45,
+      "pages": 2800,
+      "percentage": 41,
       "date": "17/06/2024",
       "stock": 4,
       "changed": 0,
@@ -2135,8 +2135,8 @@
     },
     {
       "ID": 46,
-      "pages": 6600,
-      "percentage": 95,
+      "pages": 6300,
+      "percentage": 92,
       "date": "08/07/2024",
       "stock": 1,
       "changed": 1,
@@ -2144,8 +2144,8 @@
     },
     {
       "ID": 46,
-      "pages": 4900,
-      "percentage": 71,
+      "pages": 4700,
+      "percentage": 68,
       "date": "17/06/2024",
       "stock": 1,
       "changed": 0,
@@ -2153,8 +2153,8 @@
     },
     {
       "ID": 46,
-      "pages": 6100,
-      "percentage": 61,
+      "pages": 5800,
+      "percentage": 58,
       "date": "24/06/2024",
       "stock": 0,
       "changed": 0,
@@ -2169,12 +2169,12 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.104.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 47,
-      "pages": 6400,
-      "percentage": 93,
+      "pages": 6100,
+      "percentage": 88,
       "date": "08/07/2024",
       "stock": 1,
       "changed": 1,
@@ -2182,8 +2182,8 @@
     },
     {
       "ID": 47,
-      "pages": 1200,
-      "percentage": 18,
+      "pages": 1000,
+      "percentage": 14,
       "date": "20/05/2024",
       "stock": 0,
       "changed": 0,
@@ -2191,8 +2191,8 @@
     },
     {
       "ID": 47,
-      "pages": 3200,
-      "percentage": 47,
+      "pages": 3000,
+      "percentage": 43,
       "date": "27/05/2024",
       "stock": 1,
       "changed": 0,
@@ -2200,8 +2200,8 @@
     },
     {
       "ID": 47,
-      "pages": 8600,
-      "percentage": 86,
+      "pages": 8100,
+      "percentage": 81,
       "date": "08/07/2024",
       "stock": 1,
       "changed": 1,
@@ -2216,12 +2216,12 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.105.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 48,
-      "pages": 5700,
-      "percentage": 82,
+      "pages": 5500,
+      "percentage": 80,
       "date": "01/07/2024",
       "stock": 2,
       "changed": 1,
@@ -2229,8 +2229,8 @@
     },
     {
       "ID": 48,
-      "pages": 3900,
-      "percentage": 56,
+      "pages": 3800,
+      "percentage": 55,
       "date": "10/06/2024",
       "stock": 1,
       "changed": 0,
@@ -2239,7 +2239,7 @@
     {
       "ID": 48,
       "pages": 2300,
-      "percentage": 34,
+      "percentage": 33,
       "date": "29/04/2024",
       "stock": 0,
       "changed": 2,
@@ -2247,8 +2247,8 @@
     },
     {
       "ID": 48,
-      "pages": 2100,
-      "percentage": 21,
+      "pages": 1900,
+      "percentage": 19,
       "date": "10/06/2024",
       "stock": 1,
       "changed": 0,
@@ -2263,15 +2263,24 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.106.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 49,
-      "pages": 600,
-      "percentage": 9,
+      "pages": 100,
+      "percentage": 1,
       "date": "27/05/2024",
       "stock": 3,
       "changed": 0,
+      "printerID": 49
+    },
+    {
+      "ID": 49,
+      "pages": 6100,
+      "percentage": 89,
+      "date": "08/07/2024",
+      "stock": 1,
+      "changed": 1,
       "printerID": 49
     },
     {
@@ -2285,17 +2294,8 @@
     },
     {
       "ID": 49,
-      "pages": 6500,
-      "percentage": 94,
-      "date": "08/07/2024",
-      "stock": 1,
-      "changed": 1,
-      "printerID": 49
-    },
-    {
-      "ID": 49,
-      "pages": 3200,
-      "percentage": 32,
+      "pages": 2900,
+      "percentage": 29,
       "date": "10/06/2024",
       "stock": 3,
       "changed": 0,
@@ -2310,7 +2310,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.106.47",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 50,
@@ -2357,12 +2357,12 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.108.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 51,
-      "pages": 6400,
-      "percentage": 93,
+      "pages": 6300,
+      "percentage": 92,
       "date": "08/07/2024",
       "stock": 2,
       "changed": 1,
@@ -2371,7 +2371,7 @@
     {
       "ID": 51,
       "pages": 3700,
-      "percentage": 54,
+      "percentage": 53,
       "date": "17/06/2024",
       "stock": 1,
       "changed": 0,
@@ -2379,8 +2379,8 @@
     },
     {
       "ID": 51,
-      "pages": 2700,
-      "percentage": 39,
+      "pages": 2600,
+      "percentage": 38,
       "date": "27/05/2024",
       "stock": 1,
       "changed": 0,
@@ -2388,8 +2388,8 @@
     },
     {
       "ID": 51,
-      "pages": 3900,
-      "percentage": 39,
+      "pages": 3500,
+      "percentage": 35,
       "date": "17/06/2024",
       "stock": 0,
       "changed": 0,
@@ -2404,12 +2404,12 @@
       "model": "MFP",
       "drum": null,
       "ip": "192.168.109.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 52,
-      "pages": 800,
-      "percentage": 11,
+      "pages": 600,
+      "percentage": 9,
       "date": "30/05/2024",
       "stock": 1,
       "changed": 0,
@@ -2417,8 +2417,8 @@
     },
     {
       "ID": 52,
-      "pages": 3500,
-      "percentage": 50,
+      "pages": 3400,
+      "percentage": 49,
       "date": "14/06/2024",
       "stock": 1,
       "changed": 0,
@@ -2426,8 +2426,8 @@
     },
     {
       "ID": 52,
-      "pages": 6100,
-      "percentage": 89,
+      "pages": 6000,
+      "percentage": 87,
       "date": "04/07/2024",
       "stock": 1,
       "changed": 1,
@@ -2435,8 +2435,8 @@
     },
     {
       "ID": 52,
-      "pages": 1300,
-      "percentage": 15,
+      "pages": 900,
+      "percentage": 10,
       "date": "21/06/2024",
       "stock": 0,
       "changed": 0,
@@ -2451,12 +2451,12 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.111.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 53,
-      "pages": 5200,
-      "percentage": 76,
+      "pages": 5100,
+      "percentage": 74,
       "date": "01/07/2024",
       "stock": 1,
       "changed": 1,
@@ -2464,8 +2464,8 @@
     },
     {
       "ID": 53,
-      "pages": 2200,
-      "percentage": 32,
+      "pages": 2100,
+      "percentage": 31,
       "date": "03/06/2024",
       "stock": 1,
       "changed": 0,
@@ -2474,7 +2474,7 @@
     {
       "ID": 53,
       "pages": 6600,
-      "percentage": 96,
+      "percentage": 95,
       "date": "08/07/2024",
       "stock": 0,
       "changed": 1,
@@ -2482,8 +2482,8 @@
     },
     {
       "ID": 53,
-      "pages": 7300,
-      "percentage": 73,
+      "pages": 7000,
+      "percentage": 70,
       "date": "01/07/2024",
       "stock": 1,
       "changed": 1,
@@ -2498,7 +2498,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.211.49",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 54,
@@ -2529,8 +2529,8 @@
     },
     {
       "ID": 54,
-      "pages": 9700,
-      "percentage": 97,
+      "pages": 9600,
+      "percentage": 96,
       "date": "01/07/2024",
       "stock": 2,
       "changed": 1,
@@ -2545,12 +2545,12 @@
       "model": "MFP",
       "drum": null,
       "ip": "192.168.211.50",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 55,
-      "pages": 4900,
-      "percentage": 71,
+      "pages": 4800,
+      "percentage": 69,
       "date": "03/07/2024",
       "stock": 0,
       "changed": 1,
@@ -2558,8 +2558,8 @@
     },
     {
       "ID": 55,
-      "pages": 600,
-      "percentage": 8,
+      "pages": 400,
+      "percentage": 6,
       "date": "03/06/2024",
       "stock": 1,
       "changed": 0,
@@ -2567,8 +2567,8 @@
     },
     {
       "ID": 55,
-      "pages": 5500,
-      "percentage": 79,
+      "pages": 5300,
+      "percentage": 77,
       "date": "03/07/2024",
       "stock": 0,
       "changed": 1,
@@ -2576,8 +2576,8 @@
     },
     {
       "ID": 55,
-      "pages": 3100,
-      "percentage": 36,
+      "pages": 2800,
+      "percentage": 32,
       "date": "26/06/2024",
       "stock": 1,
       "changed": 0,
@@ -2592,12 +2592,12 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.118.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 56,
-      "pages": 2300,
-      "percentage": 34,
+      "pages": 2200,
+      "percentage": 32,
       "date": "10/06/2024",
       "stock": 1,
       "changed": 0,
@@ -2606,7 +2606,7 @@
     {
       "ID": 56,
       "pages": 6600,
-      "percentage": 96,
+      "percentage": 95,
       "date": "01/07/2024",
       "stock": 0,
       "changed": 1,
@@ -2614,8 +2614,8 @@
     },
     {
       "ID": 56,
-      "pages": 3000,
-      "percentage": 43,
+      "pages": 2900,
+      "percentage": 42,
       "date": "20/05/2024",
       "stock": 0,
       "changed": 0,
@@ -2623,8 +2623,8 @@
     },
     {
       "ID": 56,
-      "pages": 7700,
-      "percentage": 77,
+      "pages": 7500,
+      "percentage": 75,
       "date": "01/07/2024",
       "stock": 0,
       "changed": 1,
@@ -2639,12 +2639,12 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.123.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 57,
       "pages": 4600,
-      "percentage": 67,
+      "percentage": 66,
       "date": "10/06/2024",
       "stock": 0,
       "changed": 0,
@@ -2670,8 +2670,8 @@
     },
     {
       "ID": 57,
-      "pages": 10000,
-      "percentage": 100,
+      "pages": 9800,
+      "percentage": 98,
       "date": "08/07/2024",
       "stock": 0,
       "changed": 1,
@@ -2686,12 +2686,12 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.119.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 58,
-      "pages": 3000,
-      "percentage": 43,
+      "pages": 2800,
+      "percentage": 41,
       "date": "17/06/2024",
       "stock": 0,
       "changed": 0,
@@ -2699,8 +2699,8 @@
     },
     {
       "ID": 58,
-      "pages": 3500,
-      "percentage": 50,
+      "pages": 3400,
+      "percentage": 49,
       "date": "17/06/2024",
       "stock": 1,
       "changed": 0,
@@ -2709,7 +2709,7 @@
     {
       "ID": 58,
       "pages": 1700,
-      "percentage": 25,
+      "percentage": 24,
       "date": "20/05/2024",
       "stock": 0,
       "changed": 0,
@@ -2717,8 +2717,8 @@
     },
     {
       "ID": 58,
-      "pages": 7900,
-      "percentage": 79,
+      "pages": 7500,
+      "percentage": 75,
       "date": "08/07/2024",
       "stock": 1,
       "changed": 1,
@@ -2733,12 +2733,12 @@
       "model": "MFP",
       "drum": null,
       "ip": "192.168.120.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 59,
-      "pages": 3000,
-      "percentage": 43,
+      "pages": 2800,
+      "percentage": 40,
       "date": "10/06/2024",
       "stock": 1,
       "changed": 0,
@@ -2746,8 +2746,8 @@
     },
     {
       "ID": 59,
-      "pages": 3700,
-      "percentage": 54,
+      "pages": 3500,
+      "percentage": 51,
       "date": "10/06/2024",
       "stock": 1,
       "changed": 0,
@@ -2755,8 +2755,8 @@
     },
     {
       "ID": 59,
-      "pages": 3700,
-      "percentage": 54,
+      "pages": 3500,
+      "percentage": 51,
       "date": "10/06/2024",
       "stock": 1,
       "changed": 0,
@@ -2764,8 +2764,8 @@
     },
     {
       "ID": 59,
-      "pages": 2600,
-      "percentage": 30,
+      "pages": 2300,
+      "percentage": 27,
       "date": "15/06/2024",
       "stock": 0,
       "changed": 0,
@@ -2780,7 +2780,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.148.101",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 60,
@@ -2827,7 +2827,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.148.110",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 61,
@@ -2874,7 +2874,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.148.112",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 62,
@@ -2921,7 +2921,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.148.113",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 63,
@@ -2968,7 +2968,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.148.114",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 64,
@@ -3015,7 +3015,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.148.118",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 65,
@@ -3062,12 +3062,12 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.122.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 66,
-      "pages": 5800,
-      "percentage": 84,
+      "pages": 5700,
+      "percentage": 82,
       "date": "08/07/2024",
       "stock": 1,
       "changed": 1,
@@ -3075,8 +3075,8 @@
     },
     {
       "ID": 66,
-      "pages": 3600,
-      "percentage": 52,
+      "pages": 3500,
+      "percentage": 51,
       "date": "17/06/2024",
       "stock": 1,
       "changed": 0,
@@ -3085,7 +3085,7 @@
     {
       "ID": 66,
       "pages": 4800,
-      "percentage": 70,
+      "percentage": 69,
       "date": "24/06/2024",
       "stock": 1,
       "changed": 0,
@@ -3093,8 +3093,8 @@
     },
     {
       "ID": 66,
-      "pages": 2500,
-      "percentage": 25,
+      "pages": 2300,
+      "percentage": 23,
       "date": "17/06/2024",
       "stock": 0,
       "changed": 0,
@@ -3109,7 +3109,7 @@
       "model": "MFP",
       "drum": null,
       "ip": "192.168.113.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 67,
@@ -3122,8 +3122,8 @@
     },
     {
       "ID": 67,
-      "pages": 2600,
-      "percentage": 37,
+      "pages": 2500,
+      "percentage": 36,
       "date": "12/06/2024",
       "stock": 2,
       "changed": 0,
@@ -3132,7 +3132,7 @@
     {
       "ID": 67,
       "pages": 6600,
-      "percentage": 96,
+      "percentage": 95,
       "date": "11/07/2024",
       "stock": 0,
       "changed": 1,
@@ -3140,8 +3140,8 @@
     },
     {
       "ID": 67,
-      "pages": 1500,
-      "percentage": 17,
+      "pages": 1200,
+      "percentage": 14,
       "date": "19/06/2024",
       "stock": 0,
       "changed": 0,
@@ -3156,12 +3156,12 @@
       "model": "MFP",
       "drum": null,
       "ip": "192.168.121.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 68,
-      "pages": 1600,
-      "percentage": 23,
+      "pages": 1400,
+      "percentage": 21,
       "date": "07/06/2024",
       "stock": 2,
       "changed": 0,
@@ -3169,8 +3169,8 @@
     },
     {
       "ID": 68,
-      "pages": 700,
-      "percentage": 10,
+      "pages": 600,
+      "percentage": 9,
       "date": "20/05/2024",
       "stock": 0,
       "changed": 0,
@@ -3178,8 +3178,8 @@
     },
     {
       "ID": 68,
-      "pages": 3900,
-      "percentage": 56,
+      "pages": 3800,
+      "percentage": 55,
       "date": "14/06/2024",
       "stock": 1,
       "changed": 0,
@@ -3187,8 +3187,8 @@
     },
     {
       "ID": 68,
-      "pages": 2200,
-      "percentage": 25,
+      "pages": 1800,
+      "percentage": 21,
       "date": "17/06/2024",
       "stock": 0,
       "changed": 0,
@@ -3203,12 +3203,12 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.110.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 69,
-      "pages": 1600,
-      "percentage": 23,
+      "pages": 1300,
+      "percentage": 19,
       "date": "10/06/2024",
       "stock": 1,
       "changed": 0,
@@ -3216,8 +3216,17 @@
     },
     {
       "ID": 69,
-      "pages": 100,
-      "percentage": 1,
+      "pages": 6800,
+      "percentage": 99,
+      "date": "08/07/2024",
+      "stock": 0,
+      "changed": 1,
+      "printerID": 69
+    },
+    {
+      "ID": 69,
+      "pages": 1300,
+      "percentage": 19,
       "date": "06/05/2024",
       "stock": 0,
       "changed": 2,
@@ -3225,17 +3234,8 @@
     },
     {
       "ID": 69,
-      "pages": 1400,
-      "percentage": 20,
-      "date": "06/05/2024",
-      "stock": 0,
-      "changed": 2,
-      "printerID": 69
-    },
-    {
-      "ID": 69,
-      "pages": 2600,
-      "percentage": 26,
+      "pages": 2200,
+      "percentage": 22,
       "date": "17/06/2024",
       "stock": 0,
       "changed": 0,
@@ -3250,7 +3250,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.110.47",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 70,
@@ -3297,12 +3297,12 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.124.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 71,
-      "pages": 2900,
-      "percentage": 42,
+      "pages": 2700,
+      "percentage": 39,
       "date": "10/06/2024",
       "stock": 1,
       "changed": 0,
@@ -3310,8 +3310,8 @@
     },
     {
       "ID": 71,
-      "pages": 6800,
-      "percentage": 98,
+      "pages": 6700,
+      "percentage": 97,
       "date": "08/07/2024",
       "stock": 0,
       "changed": 1,
@@ -3319,8 +3319,8 @@
     },
     {
       "ID": 71,
-      "pages": 1000,
-      "percentage": 14,
+      "pages": 900,
+      "percentage": 13,
       "date": "15/04/2024",
       "stock": 0,
       "changed": 2,
@@ -3328,8 +3328,8 @@
     },
     {
       "ID": 71,
-      "pages": 3700,
-      "percentage": 37,
+      "pages": 3400,
+      "percentage": 34,
       "date": "17/06/2024",
       "stock": 0,
       "changed": 0,
@@ -3344,7 +3344,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.249.120",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 72,
@@ -3391,7 +3391,7 @@
       "model": "P77",
       "drum": 1,
       "ip": "192.168.149.101",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 73,
@@ -3438,7 +3438,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.149.116",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 74,
@@ -3485,7 +3485,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.148.119",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 75,
@@ -3532,7 +3532,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.149.121",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 76,
@@ -3579,7 +3579,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.148.120",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 77,
@@ -3626,7 +3626,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.149.103",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 78,
@@ -3673,12 +3673,12 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.126.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 79,
-      "pages": 1500,
-      "percentage": 22,
+      "pages": 900,
+      "percentage": 13,
       "date": "03/06/2024",
       "stock": 1,
       "changed": 0,
@@ -3686,17 +3686,17 @@
     },
     {
       "ID": 79,
-      "pages": 0,
-      "percentage": 0,
-      "date": "22/04/2024",
+      "pages": 6600,
+      "percentage": 95,
+      "date": "08/07/2024",
       "stock": 0,
-      "changed": 2,
+      "changed": 1,
       "printerID": 79
     },
     {
       "ID": 79,
-      "pages": 2800,
-      "percentage": 40,
+      "pages": 2600,
+      "percentage": 37,
       "date": "20/05/2024",
       "stock": 0,
       "changed": 0,
@@ -3704,8 +3704,8 @@
     },
     {
       "ID": 79,
-      "pages": 9300,
-      "percentage": 93,
+      "pages": 8900,
+      "percentage": 89,
       "date": "08/07/2024",
       "stock": 1,
       "changed": 1,
@@ -3720,12 +3720,12 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.125.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 80,
-      "pages": 6000,
-      "percentage": 87,
+      "pages": 5900,
+      "percentage": 85,
       "date": "01/07/2024",
       "stock": 1,
       "changed": 1,
@@ -3733,8 +3733,8 @@
     },
     {
       "ID": 80,
-      "pages": 5300,
-      "percentage": 77,
+      "pages": 5200,
+      "percentage": 76,
       "date": "24/06/2024",
       "stock": 1,
       "changed": 0,
@@ -3742,8 +3742,8 @@
     },
     {
       "ID": 80,
-      "pages": 6800,
-      "percentage": 98,
+      "pages": 6700,
+      "percentage": 97,
       "date": "08/07/2024",
       "stock": 1,
       "changed": 1,
@@ -3751,8 +3751,8 @@
     },
     {
       "ID": 80,
-      "pages": 7300,
-      "percentage": 73,
+      "pages": 6900,
+      "percentage": 69,
       "date": "01/07/2024",
       "stock": 1,
       "changed": 1,
@@ -3767,12 +3767,12 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.115.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 81,
-      "pages": 4600,
-      "percentage": 66,
+      "pages": 4500,
+      "percentage": 65,
       "date": "17/06/2024",
       "stock": 0,
       "changed": 0,
@@ -3798,8 +3798,8 @@
     },
     {
       "ID": 81,
-      "pages": 4900,
-      "percentage": 49,
+      "pages": 4600,
+      "percentage": 46,
       "date": "17/06/2024",
       "stock": 0,
       "changed": 0,
@@ -3814,7 +3814,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.128.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 82,
@@ -3861,7 +3861,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.112.48",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 83,
@@ -3892,8 +3892,8 @@
     },
     {
       "ID": 83,
-      "pages": 8800,
-      "percentage": 88,
+      "pages": 8700,
+      "percentage": 87,
       "date": "01/07/2024",
       "stock": 0,
       "changed": 1,
@@ -3908,12 +3908,12 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.130.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 84,
-      "pages": 1500,
-      "percentage": 22,
+      "pages": 1400,
+      "percentage": 21,
       "date": "10/06/2024",
       "stock": 1,
       "changed": 0,
@@ -3921,8 +3921,8 @@
     },
     {
       "ID": 84,
-      "pages": 1100,
-      "percentage": 16,
+      "pages": 1000,
+      "percentage": 15,
       "date": "06/05/2024",
       "stock": 0,
       "changed": 2,
@@ -3930,8 +3930,8 @@
     },
     {
       "ID": 84,
-      "pages": 1100,
-      "percentage": 16,
+      "pages": 1000,
+      "percentage": 15,
       "date": "29/04/2024",
       "stock": 0,
       "changed": 2,
@@ -3939,8 +3939,8 @@
     },
     {
       "ID": 84,
-      "pages": 1800,
-      "percentage": 18,
+      "pages": 1500,
+      "percentage": 15,
       "date": "10/06/2024",
       "stock": 0,
       "changed": 0,
@@ -3955,12 +3955,12 @@
       "model": "MFP",
       "drum": null,
       "ip": "192.168.131.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 85,
-      "pages": 6900,
-      "percentage": 100,
+      "pages": 6800,
+      "percentage": 99,
       "date": "12/07/2024",
       "stock": 0,
       "changed": 1,
@@ -3968,8 +3968,8 @@
     },
     {
       "ID": 85,
-      "pages": 100,
-      "percentage": 2,
+      "pages": 0,
+      "percentage": 0,
       "date": "17/05/2024",
       "stock": 1,
       "changed": 0,
@@ -3977,8 +3977,8 @@
     },
     {
       "ID": 85,
-      "pages": 600,
-      "percentage": 9,
+      "pages": 500,
+      "percentage": 7,
       "date": "17/05/2024",
       "stock": 0,
       "changed": 0,
@@ -3986,8 +3986,8 @@
     },
     {
       "ID": 85,
-      "pages": 6000,
-      "percentage": 70,
+      "pages": 5700,
+      "percentage": 66,
       "date": "02/07/2024",
       "stock": 1,
       "changed": 1,
@@ -4002,12 +4002,12 @@
       "model": "MFP",
       "drum": null,
       "ip": "192.168.107.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 86,
-      "pages": 1000,
-      "percentage": 15,
+      "pages": 800,
+      "percentage": 11,
       "date": "06/06/2024",
       "stock": 1,
       "changed": 0,
@@ -4024,8 +4024,8 @@
     },
     {
       "ID": 86,
-      "pages": 600,
-      "percentage": 9,
+      "pages": 300,
+      "percentage": 5,
       "date": "20/05/2024",
       "stock": 0,
       "changed": 0,
@@ -4033,8 +4033,8 @@
     },
     {
       "ID": 86,
-      "pages": 2300,
-      "percentage": 27,
+      "pages": 1800,
+      "percentage": 21,
       "date": "20/06/2024",
       "stock": 0,
       "changed": 0,
@@ -4049,12 +4049,12 @@
       "model": "MFP",
       "drum": null,
       "ip": "192.168.132.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 87,
-      "pages": 3900,
-      "percentage": 57,
+      "pages": 3800,
+      "percentage": 55,
       "date": "23/06/2024",
       "stock": 0,
       "changed": 0,
@@ -4062,17 +4062,17 @@
     },
     {
       "ID": 87,
-      "pages": 4900,
-      "percentage": 71,
+      "pages": 4800,
+      "percentage": 69,
       "date": "28/06/2024",
       "stock": 0,
-      "changed": 1,
+      "changed": 0,
       "printerID": 87
     },
     {
       "ID": 87,
-      "pages": 1100,
-      "percentage": 16,
+      "pages": 1000,
+      "percentage": 14,
       "date": "30/05/2024",
       "stock": 0,
       "changed": 0,
@@ -4080,8 +4080,8 @@
     },
     {
       "ID": 87,
-      "pages": 2700,
-      "percentage": 31,
+      "pages": 2400,
+      "percentage": 28,
       "date": "21/06/2024",
       "stock": 0,
       "changed": 0,
@@ -4096,7 +4096,7 @@
       "model": "MFP",
       "drum": null,
       "ip": "192.168.132.47",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 88,
@@ -4143,7 +4143,7 @@
       "model": "MFP",
       "drum": null,
       "ip": "192.168.147.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 89,
@@ -4190,7 +4190,7 @@
       "model": "MFP",
       "drum": null,
       "ip": "192.168.127.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 90,
@@ -4221,8 +4221,8 @@
     },
     {
       "ID": 90,
-      "pages": 8600,
-      "percentage": 100,
+      "pages": 8500,
+      "percentage": 99,
       "date": "14/02/2024",
       "stock": 0,
       "changed": 0,
@@ -4237,7 +4237,7 @@
       "model": "MFP",
       "drum": null,
       "ip": "192.168.129.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 91,
@@ -4250,8 +4250,8 @@
     },
     {
       "ID": 91,
-      "pages": 1300,
-      "percentage": 19,
+      "pages": 1200,
+      "percentage": 18,
       "date": "03/04/2024",
       "stock": 0,
       "changed": 0,
@@ -4260,7 +4260,7 @@
     {
       "ID": 91,
       "pages": 2100,
-      "percentage": 31,
+      "percentage": 30,
       "date": "03/04/2024",
       "stock": 0,
       "changed": 0,
@@ -4268,8 +4268,8 @@
     },
     {
       "ID": 91,
-      "pages": 3300,
-      "percentage": 38,
+      "pages": 3100,
+      "percentage": 36,
       "date": "12/06/2024",
       "stock": 1,
       "changed": 0,
@@ -4284,7 +4284,7 @@
       "model": "MFP",
       "drum": null,
       "ip": "10.0.40.46",
-      "error": 1
+      "error": 0
     },
     {
       "ID": 92,
@@ -4306,8 +4306,8 @@
     },
     {
       "ID": 92,
-      "pages": 5000,
-      "percentage": 72,
+      "pages": 4900,
+      "percentage": 71,
       "date": "11/03/2024",
       "stock": 0,
       "changed": 0,
