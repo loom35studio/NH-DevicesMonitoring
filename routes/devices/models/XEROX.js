@@ -4,8 +4,11 @@ const initializeSettings = require('../../settings.js');
 async function checkXEROX(vb, printer){
     const settings = await initializeSettings();
     const { db } = settings;
+
+    connection = await db.promise().getConnection();
     //let date = await data(printer);
-    db.query("UPDATE black SET pages = ?, percentage = ?, drum = ?, date = ? WHERE printerID = ?", [vb[4].value, (Math.round((vb[1].value*100)/vb[0].value)), (Math.round((vb[3].value*100)/vb[2].value)), "non trovata", printer.ID]);
+    await connection.query("UPDATE printer SET drum = ? WHERE ID = ?", [(Math.round((vb[3].value*100)/vb[2].value)), printer.ID]);
+    await connection.query("UPDATE black SET pages = ?, percentage = ?, date = ? WHERE printerID = ?", [vb[4].value, (Math.round((vb[1].value*100)/vb[0].value)), null, printer.ID]);
 }
 
 

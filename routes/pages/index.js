@@ -34,12 +34,7 @@ router.get('/', async function(req, res, next) {
         };
 
         deviceList = sortByName(deviceList);
-
-        const generateTxt = async (devices) => {
-            // Implementa la logica per generare textPrinters
-            return 'Testo generato';
-        };
-
+        
         textPrinters = await generateTxt(deviceList);
         res.render('index', { printer: deviceList, txt: textPrinters });
     } catch (error) {

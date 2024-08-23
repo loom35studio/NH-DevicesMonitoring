@@ -38,6 +38,8 @@
     --error: "❌";
     --success: "✅";
     --excl-mark: "❗";
+    --changed: " 🔄";
+    --death: " 💀";
 }
 
 body {

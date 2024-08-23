@@ -16,62 +16,96 @@ block general
             th
             th PAGINE
             th VALORE
-            th INSERIMENTO
+            if prnt[1].drum || prnt[2].drum || prnt[3].drum || prnt[4].drum
+              th DRUM
+            th DATA
             th
               i.fa.fa-archive(aria-hidden='true')
             th
-        tr.device_table_values
-            td
-              div.color.ye
-            td= prnt[1].pages
-            td= prnt[1].percentage + "%"
-            if prnt[1].changed == 1
-              td.warning= prnt[1].date
-            else
-              td= prnt[1].date
-            td= prnt[1].stock
-            td
-              a(onClick='openPopup('+"'"+'yellowtoner-'+prnt[0].ID+"'"+')')
-                i.fa.fa-pencil-square-o(aria-hidden='true')
-        tr.device_table_values
-            td
-              div.color.ma
-            td= prnt[2].pages
-            td= prnt[2].percentage + "%"
-            if prnt[2].changed == 1
-              td.warning= prnt[2].date
-            else
-              td= prnt[2].date
-            td= prnt[2].stock
-            td
-              a(onClick='openPopup('+"'"+'magentatoner-'+prnt[0].ID+"'"+')')
-                i.fa.fa-pencil-square-o(aria-hidden='true')
-        tr.device_table_values
-            td
-              div.color.cy
-            td= prnt[3].pages
-            td= prnt[3].percentage + "%"
-            if prnt[3].changed == 1
-              td.warning= prnt[3].date
-            else
-              td= prnt[3].date
-            td= prnt[3].stock
-            td
-              a(onClick='openPopup('+"'"+'cyantoner-'+prnt[0].ID+"'"+')')
-                i.fa.fa-pencil-square-o(aria-hidden='true')
-        tr.device_table_values
-            td
-              div.color.bk
-            td= prnt[4].pages
-            td= prnt[4].percentage + "%"
-            if prnt[4].changed == 1
-              td.warning= prnt[4].date
-            else
-              td= prnt[4].date
-            td= prnt[4].stock
-            td
-              a(onClick='openPopup('+"'"+'blacktoner-'+prnt[0].ID+"'"+')')
-                i.fa.fa-pencil-square-o(aria-hidden='true')
+        if prnt[1].pages || prnt[1].percentage || prnt[1].drum || prnt[1].date
+          tr.device_table_values
+              td
+                div.color.ye
+              td= prnt[1].pages
+              td= prnt[1].percentage + "%"
+              if prnt[1].drum
+                td= prnt[1].drum + "%"
+              if prnt[1].date
+                if prnt[1].changed == 1
+                  td.changed= prnt[1].date
+                else if prnt[1].changed == 2
+                  td.death= prnt[1].date
+                else
+                  td= prnt[1].date
+              else
+                td= "❌"
+              td= prnt[1].stock
+              td
+                a(onClick='openPopup('+"'"+'yellowtoner-'+prnt[0].ID+"'"+')')
+                  i.fa.fa-pencil-square-o(aria-hidden='true')
+        if prnt[2].pages || prnt[2].percentage || prnt[2].drum || prnt[2].date
+          tr.device_table_values
+              td
+                div.color.ma
+              td= prnt[2].pages
+              td= prnt[2].percentage + "%"
+              if prnt[2].drum
+                td= prnt[2].drum + "%"
+              if prnt[2].date
+                if prnt[2].changed == 1
+                  td.changed= prnt[2].date
+                else if prnt[2].changed == 2
+                  td.death= prnt[2].date
+                else
+                  td= prnt[2].date
+              else
+                td= "❌"
+              td= prnt[2].stock
+              td
+                a(onClick='openPopup('+"'"+'magentatoner-'+prnt[0].ID+"'"+')')
+                  i.fa.fa-pencil-square-o(aria-hidden='true')
+        if prnt[3].pages || prnt[3].percentage || prnt[3].drum || prnt[3].date
+          tr.device_table_values
+              td
+                div.color.cy
+              td= prnt[3].pages
+              td= prnt[3].percentage + "%"
+              if prnt[3].drum
+                td= prnt[3].drum + "%"
+              if prnt[3].date
+                if prnt[3].changed == 1
+                  td.changed= prnt[3].date
+                else if prnt[3].changed == 2
+                  td.death= prnt[3].date
+                else
+                  td= prnt[3].date
+              else
+                td= "❌"
+              td= prnt[3].stock
+              td
+                a(onClick='openPopup('+"'"+'cyantoner-'+prnt[0].ID+"'"+')')
+                  i.fa.fa-pencil-square-o(aria-hidden='true')
+        if prnt[4].pages || prnt[4].percentage || prnt[4].drum || prnt[4].date
+          tr.device_table_values
+              td
+                div.color.bk
+              td= prnt[4].pages
+              td= prnt[4].percentage + "%"
+              if prnt[4].drum
+                td= prnt[4].drum + "%"
+              if prnt[4].date
+                if prnt[4].changed == 1
+                  td.changed= prnt[4].date
+                else if prnt[4].changed == 2
+                  td.death= prnt[4].date
+                else
+                  td= prnt[4].date
+              else
+                td= "❌"
+              td= prnt[4].stock
+              td
+                a(onClick='openPopup('+"'"+'blacktoner-'+prnt[0].ID+"'"+')')
+                  i.fa.fa-pencil-square-o(aria-hidden='true')
 
 include ../popups/deviceinfo
 include ../popups/updateYellow

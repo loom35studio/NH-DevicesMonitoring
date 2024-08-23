@@ -7,31 +7,12 @@ block content
     div.device_container
       each prnt in printer
         if prnt[0].society == "Pewex"
-          if prnt[0].model== "477"
-            include templates/printers/general
-          else if prnt[0].model== "P77"
-            include templates/printers/general
-          else if prnt[0].model== "MFP"
-            include templates/printers/general
-          else if prnt[0].model == "XEROX"
-            include templates/printers/xerox
-          else if prnt[0].model == "OTHER"
-            include templates/printers/other
-          
+          include templates/printers/general
     h4 Elite
     divc.device_container
       each prnt in printer
         if prnt[0].society == "Elite"
-          if prnt[0].model== "477"
-            include templates/printers/general
-          else if prnt[0].model== "P77"
-            include templates/printers/general
-          else if prnt[0].model== "MFP"
-            include templates/printers/general
-          else if prnt[0].model == "XEROX"
-            include templates/printers/xerox
-          else if prnt[0].model == "OTHER"
-            include templates/printers/other
+          include templates/printers/general
         
     script.
         window.addEventListener('beforeunload', () => {

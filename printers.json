@@ -7,7 +7,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.66.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 1,
@@ -54,7 +54,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.68.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 2,
@@ -85,8 +85,8 @@
     },
     {
       "ID": 2,
-      "pages": 700,
-      "percentage": 7,
+      "pages": 0,
+      "percentage": 0,
       "date": "04/03/2024",
       "stock": 1,
       "changed": 2,
@@ -101,7 +101,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.168.116",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 3,
@@ -148,7 +148,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.168.118",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 4,
@@ -195,7 +195,7 @@
       "model": "MFP",
       "drum": null,
       "ip": "10.0.13.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 5,
@@ -226,8 +226,8 @@
     },
     {
       "ID": 5,
-      "pages": 2200,
-      "percentage": 25,
+      "pages": 2100,
+      "percentage": 24,
       "date": "29/05/2024",
       "stock": 0,
       "changed": 0,
@@ -242,7 +242,7 @@
       "model": "MFP",
       "drum": null,
       "ip": "10.0.15.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 6,
@@ -289,7 +289,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.46.47",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 7,
@@ -336,7 +336,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.14.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 8,
@@ -383,7 +383,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.60.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 9,
@@ -430,7 +430,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.73.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 10,
@@ -477,7 +477,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.72.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 11,
@@ -571,7 +571,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.75.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 13,
@@ -618,7 +618,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.74.47",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 14,
@@ -665,7 +665,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.74.48",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 15,
@@ -712,7 +712,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.10.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 16,
@@ -759,7 +759,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.59.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 17,
@@ -806,7 +806,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.57.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 18,
@@ -853,7 +853,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.27.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 19,
@@ -900,12 +900,12 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.76.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 20,
       "pages": 1900,
-      "percentage": 28,
+      "percentage": 27,
       "date": "18/03/2024",
       "stock": 0,
       "changed": 2,
@@ -947,7 +947,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.26.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 21,
@@ -994,7 +994,7 @@
       "model": "OTHER",
       "drum": null,
       "ip": "192.168.168.135",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 22,
@@ -1027,7 +1027,7 @@
       "ID": 22,
       "pages": null,
       "percentage": 47,
-      "date": "non trovata",
+      "date": null,
       "stock": 0,
       "changed": 0,
       "printerID": 22
@@ -1041,7 +1041,7 @@
       "model": "OTHER",
       "drum": null,
       "ip": "192.168.168.53",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 23,
@@ -1074,7 +1074,7 @@
       "ID": 23,
       "pages": null,
       "percentage": 2,
-      "date": "non trovata",
+      "date": null,
       "stock": 0,
       "changed": 0,
       "printerID": 23
@@ -1088,7 +1088,7 @@
       "model": "OTHER",
       "drum": null,
       "ip": "10.0.43.47",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 24,
@@ -1121,7 +1121,7 @@
       "ID": 24,
       "pages": null,
       "percentage": 51,
-      "date": "non trovata",
+      "date": null,
       "stock": 0,
       "changed": 0,
       "printerID": 24
@@ -1135,7 +1135,7 @@
       "model": "OTHER",
       "drum": null,
       "ip": "10.0.43.48",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 25,
@@ -1168,7 +1168,7 @@
       "ID": 25,
       "pages": null,
       "percentage": 0,
-      "date": "non trovata",
+      "date": null,
       "stock": 1,
       "changed": 0,
       "printerID": 25
@@ -1182,7 +1182,7 @@
       "model": "OTHER",
       "drum": null,
       "ip": "10.0.50.47",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 26,
@@ -1215,7 +1215,7 @@
       "ID": 26,
       "pages": null,
       "percentage": 62,
-      "date": "non trovata",
+      "date": null,
       "stock": 1,
       "changed": 0,
       "printerID": 26
@@ -1229,7 +1229,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.41.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 27,
@@ -1276,13 +1276,13 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.35.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 28,
       "pages": 4000,
       "percentage": 58,
-      "date": "non trovata",
+      "date": null,
       "stock": 1,
       "changed": 0,
       "printerID": 28
@@ -1291,7 +1291,7 @@
       "ID": 28,
       "pages": 4100,
       "percentage": 59,
-      "date": "non trovata",
+      "date": null,
       "stock": 0,
       "changed": 0,
       "printerID": 28
@@ -1309,7 +1309,7 @@
       "ID": 28,
       "pages": 6600,
       "percentage": 66,
-      "date": "non trovata",
+      "date": null,
       "stock": 1,
       "changed": 0,
       "printerID": 28
@@ -1323,7 +1323,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.78.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 29,
@@ -1368,9 +1368,9 @@
       "society": "Elite",
       "name": "Uff Freschi Pome 2",
       "model": "XEROX",
-      "drum": null,
+      "drum": 4,
       "ip": "192.168.168.163",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 30,
@@ -1401,9 +1401,9 @@
     },
     {
       "ID": 30,
-      "pages": 14760,
-      "percentage": 60,
-      "date": "non trovata",
+      "pages": 13284,
+      "percentage": 54,
+      "date": null,
       "stock": 0,
       "changed": 0,
       "printerID": 30
@@ -1415,9 +1415,9 @@
       "society": "Elite",
       "name": "Uff Mancini Pome 1",
       "model": "XEROX",
-      "drum": null,
+      "drum": 2,
       "ip": "192.168.168.82",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 31,
@@ -1448,9 +1448,9 @@
     },
     {
       "ID": 31,
-      "pages": 10824,
-      "percentage": 44,
-      "date": "non trovata",
+      "pages": 8856,
+      "percentage": 36,
+      "date": null,
       "stock": 0,
       "changed": 0,
       "printerID": 31
@@ -1464,7 +1464,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.80.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 32,
@@ -1511,7 +1511,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.63.10",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 33,
@@ -1533,8 +1533,8 @@
     },
     {
       "ID": 33,
-      "pages": 4000,
-      "percentage": 58,
+      "pages": 3900,
+      "percentage": 57,
       "date": "26/11/2023",
       "stock": 0,
       "changed": 2,
@@ -1558,7 +1558,7 @@
       "model": "MFP",
       "drum": null,
       "ip": "192.168.168.69",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 34,
@@ -1605,7 +1605,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.168.70",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 35,
@@ -1652,7 +1652,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.17.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 36,
@@ -1699,7 +1699,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.81.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 37,
@@ -1746,7 +1746,7 @@
       "model": "477",
       "drum": 1,
       "ip": "10.0.82.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 38,
@@ -1793,7 +1793,7 @@
       "model": "OTHER",
       "drum": null,
       "ip": "192.168.168.138",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 39,
@@ -1826,7 +1826,7 @@
       "ID": 39,
       "pages": null,
       "percentage": 150,
-      "date": "non trovata",
+      "date": null,
       "stock": 1,
       "changed": 0,
       "printerID": 39
@@ -1840,7 +1840,7 @@
       "model": "MFP",
       "drum": null,
       "ip": "10.0.29.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 40,
@@ -1887,7 +1887,7 @@
       "model": "MFP",
       "drum": null,
       "ip": "10.0.51.49",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 41,
@@ -1934,7 +1934,7 @@
       "model": "MFP",
       "drum": null,
       "ip": "192.168.16.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 42,
@@ -1981,7 +1981,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.101.44",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 43,
@@ -2028,7 +2028,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.101.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 44,
@@ -2075,7 +2075,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.102.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 45,
@@ -2122,7 +2122,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.103.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 46,
@@ -2169,7 +2169,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.104.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 47,
@@ -2216,7 +2216,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.105.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 48,
@@ -2263,7 +2263,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.106.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 49,
@@ -2310,7 +2310,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.106.47",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 50,
@@ -2357,7 +2357,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.108.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 51,
@@ -2404,7 +2404,7 @@
       "model": "MFP",
       "drum": null,
       "ip": "192.168.109.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 52,
@@ -2451,7 +2451,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.111.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 53,
@@ -2498,7 +2498,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.211.49",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 54,
@@ -2545,7 +2545,7 @@
       "model": "MFP",
       "drum": null,
       "ip": "192.168.211.50",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 55,
@@ -2592,7 +2592,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.118.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 56,
@@ -2639,7 +2639,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.123.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 57,
@@ -2686,7 +2686,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.119.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 58,
@@ -2733,7 +2733,7 @@
       "model": "MFP",
       "drum": null,
       "ip": "192.168.120.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 59,
@@ -2780,7 +2780,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.148.101",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 60,
@@ -2827,7 +2827,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.148.110",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 61,
@@ -2874,7 +2874,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.148.112",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 62,
@@ -2921,7 +2921,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.148.113",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 63,
@@ -2968,7 +2968,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.148.114",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 64,
@@ -3015,7 +3015,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.148.118",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 65,
@@ -3062,7 +3062,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.122.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 66,
@@ -3109,7 +3109,7 @@
       "model": "MFP",
       "drum": null,
       "ip": "192.168.113.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 67,
@@ -3156,7 +3156,7 @@
       "model": "MFP",
       "drum": null,
       "ip": "192.168.121.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 68,
@@ -3203,7 +3203,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.110.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 69,
@@ -3250,7 +3250,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.110.47",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 70,
@@ -3297,7 +3297,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.124.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 71,
@@ -3344,7 +3344,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.249.120",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 72,
@@ -3391,7 +3391,7 @@
       "model": "P77",
       "drum": 1,
       "ip": "192.168.149.101",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 73,
@@ -3438,7 +3438,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.149.116",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 74,
@@ -3485,7 +3485,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.148.119",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 75,
@@ -3532,7 +3532,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.149.121",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 76,
@@ -3579,7 +3579,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.148.120",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 77,
@@ -3626,7 +3626,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.149.103",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 78,
@@ -3673,7 +3673,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.126.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 79,
@@ -3720,7 +3720,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.125.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 80,
@@ -3767,7 +3767,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.115.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 81,
@@ -3814,7 +3814,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.128.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 82,
@@ -3861,7 +3861,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.112.48",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 83,
@@ -3908,7 +3908,7 @@
       "model": "477",
       "drum": 1,
       "ip": "192.168.130.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 84,
@@ -3955,7 +3955,7 @@
       "model": "MFP",
       "drum": null,
       "ip": "192.168.131.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 85,
@@ -4002,7 +4002,7 @@
       "model": "MFP",
       "drum": null,
       "ip": "192.168.107.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 86,
@@ -4049,7 +4049,7 @@
       "model": "MFP",
       "drum": null,
       "ip": "192.168.132.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 87,
@@ -4096,7 +4096,7 @@
       "model": "MFP",
       "drum": null,
       "ip": "192.168.132.47",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 88,
@@ -4143,7 +4143,7 @@
       "model": "MFP",
       "drum": null,
       "ip": "192.168.147.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 89,
@@ -4190,7 +4190,7 @@
       "model": "MFP",
       "drum": null,
       "ip": "192.168.127.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 90,
@@ -4237,7 +4237,7 @@
       "model": "MFP",
       "drum": null,
       "ip": "192.168.129.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 91,
@@ -4284,7 +4284,7 @@
       "model": "MFP",
       "drum": null,
       "ip": "10.0.40.46",
-      "error": 0
+      "error": 1
     },
     {
       "ID": 92,

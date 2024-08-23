@@ -4,7 +4,7 @@ function dataConv(color, model) {
     let daysBack = 16;  
     let veryOld = 60;
     let dayStr; let monthStr;
-    let data = [date = "non trovata", bool = 0]
+    let data = [date = null, bool = 0]
     let year = Math.floor(color / 10000);
     let month = Math.floor((color%10000)/100);
     let day = color % 100;

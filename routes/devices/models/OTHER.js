@@ -4,8 +4,10 @@ const initializeSettings = require('../../settings.js');
 async function checkOTHER(vb, printer){
     const settings = await initializeSettings();
     const { db } = settings;
+    
+    connection = await db.promise().getConnection();
     //let date = await data(printer);
-    db.query("UPDATE black SET percentage = ?, date = ? WHERE printerID = ?", [(Math.round((vb[1].value*100)/vb[0].value)), "non trovata", printer.ID]);
+    await connection.query("UPDATE black SET percentage = ?, date = ? WHERE printerID = ?", [(Math.round((vb[1].value*100)/vb[0].value)), null, printer.ID]);
 }
 
 async function data(printer) {
