@@ -28,3 +28,6 @@ Thumbs.db
 .idea/
 .vscode/
 
+# Next.js build output
+.next/
+

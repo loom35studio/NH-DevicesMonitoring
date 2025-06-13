@@ -1,15 +1,41 @@
 const mysql = require("mysql2");
 
-let db = mysql.createPool({
+const stubPool = {
+  query: async () => {},
+  promise() {
+    return { query: async () => [[], []] };
+  },
+  end: async () => {}
+};
+
+const db = { ...stubPool };
+let dbAvailable = false;
+
+(function initPool() {
+  const pool = mysql.createPool({
     multipleStatements: true,
     host: "localhost",
     user: "root",
-    password: 'NextHub01!',
+    password: "NextHub01!",
     database: "nh_printchecker",
     waitForConnections: true,
     connectionLimit: 10,
-    queueLimit: 0
-});
+    queueLimit: 0,
+  });
+
+  pool.getConnection((err, connection) => {
+    if (err) {
+      console.warn("Database connection failed, running without DB:", err.code);
+      return;
+    }
+
+    dbAvailable = true;
+    db.query = pool.query.bind(pool);
+    db.promise = pool.promise.bind(pool);
+    db.end = pool.end.bind(pool);
+    if (connection) connection.release();
+  });
+})();
 
 // db.connect((err) => {
 //     if (err) {
@@ -39,6 +65,7 @@ let interval = 600000;
 
 module.exports = {
   db,
+  dbAvailable,
   daysBack,
   veryOld,
   below,

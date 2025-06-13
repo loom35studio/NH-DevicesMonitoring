@@ -48,7 +48,9 @@ app.use(function(err, req, res, next) {
 // Funzione per chiudere il pool di connessioni
 const closePoolAndExit = async () => {
   try {
-    await pool.end();
+    if (settings.dbAvailable) {
+      await pool.end();
+    }
     console.log('Pool closed');
     process.exit(0);
   } catch (err) {
