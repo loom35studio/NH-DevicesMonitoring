@@ -1,35 +1,34 @@
-var express = require('express');
-const mysql = require("mysql2");
-const printerList = require("../printerList.js");
-const generateTxt = require('../generateTxt.js')
-const updateStock = require('../update/updateStock.js');
-const updateDB = require('../update/updateDB'); 
-const simpleGit = require('simple-git');
-const settings = require('../settings.js');
-let db = settings.db;
+const express = require('express');
+const generateTxt = require('../generateTxt.js');
+const initializeSettings = require('../settings.js');
+const fs = require('fs').promises;
 
-var router = express.Router();
+const router = express.Router();
 
 router.get('/', async function(req, res, next) {
-    const git = simpleGit();
-    let allPrinters = await printerList();
-    let textPrinters = await generateTxt(allPrinters);
+    try {
+        let deviceList; let textPrinters; let logs;
+        const settings = await initializeSettings();
+        const { db } = settings;
+    
+        try {
+            const data = await fs.readFile('printers.json', 'utf8');
+            deviceList = JSON.parse(data);
+        } catch (err) {
+            console.log('Errore durante la lettura del file', err);
+            return next(err);
+        }
+        
+        textPrinters = await generateTxt(deviceList);
+        logs = await db.promise().query("SELECT * FROM logs");
 
-    let logs = await db.promise().query("SELECT * FROM logs");
+        res.render('logs', { printer: deviceList, txt: textPrinters, log: logs });
 
-    // generate github commits
-    const log = await git.log();
-    const commit = log.all.map(commit => ({            
-        hash: commit.hash,
-        date: commit.date,
-        message: commit.message,
-        author: commit.author_name
-    }));
-
-    res.render('logs', {printer: allPrinters, txt: textPrinters, commits: commit, log: logs});    
-
-})
-
+    } catch (error) {
+        console.error("Errore nella gestione della rotta /:", error);
+        next(error);
+    }
+});
 router.post('/', async function(req, res, next) {
 })
 

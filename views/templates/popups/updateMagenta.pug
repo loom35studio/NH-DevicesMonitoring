@@ -1,0 +1,26 @@
+block updatemagenta
+  div(id= 'magentatoner-'+prnt[0].ID, class= "popup")
+    div.popup_content
+      div.popup_header
+        div.popup_header_title
+          h2.popup_header_title_title AGGIORNAMENTO STOCK MAGENTA
+          h3.popup_header_sub= prnt[0].name
+        div.popup_header_action_btn
+          a(onClick='closePopup('+"'"+'magentatoner-'+prnt[0].ID+"'"+')' class="action_btn")
+            i.fa.fa-times(aria-hidden='true')
+      
+      form(action="/#", method="POST", class="popup_form" onsubmit='reloadPopup('+"'"+'magentatoner-'+prnt[0].ID+"'"+')')
+        select(name="printerName", style="display:none;")
+          option(value=prnt[0].ID)
+        div.popup_form_action
+            div.popup_form_action_container
+                select(name="tonerSelection", , style="display:none;") 
+                    option(value="magenta")
+            div.popup_form_action_container
+                h3.popup_form_action_title Nota
+                input(name="note" placeholder="Se ci sono particolaritá sulla consegna")
+
+        button(type="submit" class="btn" value="insert" style="background: green;" name="tonerAction")
+            i.fa.fa-plus(aria-hidden='true')
+        button(type="submit" class="btn" value="remove" style="background: red;" name="tonerAction")
+            i.fa.fa-minus(aria-hidden='true')

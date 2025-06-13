@@ -29,6 +29,7 @@
 
     /* font sizes */
     --fs-title: 28px;
+    --fs-subtitle: 20px;
 
     /* emoji */
     --warning: "⚠️";
@@ -37,6 +38,8 @@
     --error: "❌";
     --success: "✅";
     --excl-mark: "❗";
+    --changed: " 🔄";
+    --death: " 💀";
 }
 
 body {

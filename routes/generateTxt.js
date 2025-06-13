@@ -1,9 +1,6 @@
-const printers = require('./printerList');
-const settings = require("./settings.js");
+const initializeSettings = require("./settings.js");
 
-const below = settings.below;
-
-function generateTxt(printers) {
+async function generateTxt(printers) {
     let textPrinters = "";
 
     const timeElapsed = Date.now();
@@ -11,16 +8,17 @@ function generateTxt(printers) {
     textPrinters += "NextHub - Report Stampanti " + today.toLocaleDateString() + "\n\n";
 
     textPrinters += "PEWEX: \n";
-    textPrinters += societyDivider("Pewex", printers);
+    textPrinters += await societyDivider("Pewex", printers);
     textPrinters += "\nELITE: \n";
-    textPrinters += societyDivider("Elite", printers);
+    textPrinters += await societyDivider("Elite", printers);
 
-    console.log("File TXT Generato");
+    console.log("✅ Generazione lista stampanti in TXT riuscita");
     return textPrinters;
-
 }
 
-function societyDivider(society, printers) {
+async function societyDivider(society, printers) {
+    const settings = await initializeSettings();
+    const { below } = settings;
     let tempText = "";
     let printerName = "";
 
@@ -37,27 +35,10 @@ function societyDivider(society, printers) {
                 tempText += printerName + tabsCalculator(printerName) + "NON RAGGIUNGIBILE\n";
             } else {
                 if (prnt[0].model != "XEROX" && prnt[0].model != "OTHER") {
-                    console.log(prnt[0].model + " " + prnt[0].name);
-                    if(prnt[1] != undefined) {
-                        ye = prnt[1].pages;
-                    } else {
-                        console.log("ye null/undefined");
-                    }
-                    if(prnt[2] != undefined) {
-                        ma = prnt[2].pages;
-                    } else {
-                        console.log("ma null/undefined");
-                    }
-                    if(prnt[3] != undefined) {
-                        cy = prnt[3].pages;
-                    } else {
-                        console.log("cy null/undefined");
-                    }
-                    if(prnt[4] != undefined) {
-                        bk = prnt[4].pages;
-                    } else {
-                        console.log("bk null/undefined");
-                    }
+                    if(prnt[1] != undefined) {ye = prnt[1].pages;}
+                    if(prnt[2] != undefined) {ma = prnt[2].pages;}
+                    if(prnt[3] != undefined) {cy = prnt[3].pages;}
+                    if(prnt[4] != undefined) {bk = prnt[4].pages;}
 
                     if (ye <= below && prnt[1].stock < 1 && ye != null) {tempYe = true;}
                     if (ma <= below && prnt[2].stock < 1 && ma != null) {tempMa = true;}
@@ -97,28 +78,13 @@ function societyDivider(society, printers) {
     return tempText;
 }
 
-function tabsCalculator(name){
-    let tabsNumber = name.length;
-    let tabs = "";
-    switch (true) {
-      case tabsNumber < 8:
-        tabs = "\t\t\t";
-        break;
-      case tabsNumber < 16:
-        tabs = "\t\t";
-        break;
-      case tabsNumber < 24:
-        tabs = "\t";
-        break;
-      case tabsNumber < 32:
-        tabs = " ";
-        break;
-      case tabsNumber > 32:
-        tabs = " ";
-        break;
-    }
-    return tabs;
-  };
+function tabsCalculator(name) {
+    const tabsNumber = name.length;
+    if (tabsNumber < 8) return "\t\t\t";
+    if (tabsNumber < 16) return "\t\t";
+    if (tabsNumber < 24) return "\t";
+    return " ";
+}
 
   
 module.exports = generateTxt;

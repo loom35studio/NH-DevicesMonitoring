@@ -5,17 +5,19 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const bodyParser = require('body-parser');
 
+
 var indexRouter = require('./routes/pages/index');    // ROUTER INDEX
 var logsRouter = require('./routes/pages/logs');      // ROUTER LOGS
 var adminRouter = require('./routes/pages/admin');    // ROUTER ADMIN PANEL
 
+const timedUpdate = require('./routes/schedule.js');
+
 var app = express();
 process.setMaxListeners(0);
-// view engine setup
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
-
-app.use(logger('dev'));
+//app.use(logger('dev'));
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -41,7 +43,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
 
 // Funzione per chiudere il pool di connessioni
 const closePoolAndExit = async () => {

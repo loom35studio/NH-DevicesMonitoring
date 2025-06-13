@@ -1,7 +1,7 @@
 extends layout
 
 block content
-  header
+  div.container
     h1 Storico Consegne
   div.container
     div#logs-table
@@ -10,6 +10,8 @@ block content
     var logs = !{JSON.stringify(log)};
     var printer = !{JSON.stringify(printer)};
     let printerName;
+
+    console.log(logs);
 
     var tabledata = [];
 

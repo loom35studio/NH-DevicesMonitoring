@@ -1,0 +1,6 @@
+{
+  "below": 30000,
+  "daysBack": 15,
+  "veryOld": 60,
+  "interval": 25000
+}

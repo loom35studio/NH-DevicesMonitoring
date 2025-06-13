@@ -1,41 +1,75 @@
-var express = require('express');
-const mysql = require("mysql2");
-const settings = require('../settings.js');
-const printerList = require("../printerList.js");
-const generateTxt = require('../generateTxt.js')
-const updateStock = require('../update/updateStock.js');
-const updateDB = require('../update/updateDB'); 
-const managePrinters = require('../managePrinters.js');
-const simpleGit = require('simple-git');
+const express = require('express');
+const generateTxt = require('../generateTxt.js');
+const updateStock = require('../devices/update/updateStock.js');
+const convertDevicesToJSON = require("../devices/generate/deviceList.js");
+const fs = require('fs').promises;
 
-var router = express.Router();
-
-let allPrinters = printerList();
-
-updateDB();
-setInterval(updateDB, settings.interval);
+const router = express.Router();
 
 router.get('/', async function(req, res, next) {
-    const git = simpleGit();
-    let allPrinters = await printerList();
-    let textPrinters = await generateTxt(allPrinters);
+    try {
+        let deviceList; 
+        let textPrinters;
 
-    // generate github commits
-    const log = await git.log();
-    const commit = log.all.map(commit => ({            
-        hash: commit.hash,
-        date: commit.date,
-        message: commit.message,
-        author: commit.author_name
-    }));
+        try {
+            const data = await fs.readFile('printers.json', 'utf8');
+            deviceList = JSON.parse(data);
+        } catch (err) {
+            console.log('Errore durante la lettura del file', err);
+            return next(err);
+        }
 
-    res.render('index', {printer: allPrinters, txt: textPrinters, commits: commit});    
-})
+        const sortByName = (devices) => {
+            return devices.sort((a, b) => {
+                const nameA = a[0].name.toUpperCase();
+                const nameB = b[0].name.toUpperCase();
+                if (nameA < nameB) {
+                    return -1;
+                }
+                if (nameA > nameB) {
+                    return 1;
+                }
+                return 0;
+            });
+        };
+
+        deviceList = sortByName(deviceList);
+        
+        textPrinters = await generateTxt(deviceList);
+        res.render('index', { printer: deviceList, txt: textPrinters });
+    } catch (error) {
+        console.error("Errore nella gestione della rotta /:", error);
+        next(error);
+    }
+});
 
 router.post('/', async function(req, res, next) {
-    updateStock(req);
-    res.redirect('/#device-' + req.body.printerName);
-})
+    try {
+        await updateStock(req);
 
-module.exports = router;
-  
+        console.log("Conversione JSON in corso...");
+        await convertDevicesToJSON();
+        console.log("Conversione JSON completata");
+
+        console.log("Funzione updateStock completata");
+        res.redirect('/');
+    } catch (error) {
+        console.error("Errore durante l'aggiornamento dello stock:", error);
+        next(error); // Passa l'errore al middleware di gestione degli errori
+    }
+    // updateStock(req)
+    //     .then(() => {
+    //         console.log("conversione json");
+    //         convertDevicesToJSON();
+    //     })
+    //     .then(() => {
+    //         console.log("Funzione updateStock completata");
+    //         res.redirect('/'); // Eseguito solo dopo che updateStock è completata
+    //     })
+    //     .catch((error) => {
+    //         console.error("Errore durante l'aggiornamento dello stock:", error);
+    //         next(error); // Passa l'errore al middleware di gestione degli errori
+    //     });
+});
+
+module.exports = router;  
