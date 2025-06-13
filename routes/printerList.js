@@ -1,16 +1,23 @@
-const settings = require('./settings.js');
-let db = settings.db;
+const { db, dbAvailable } = require('./settings.js');
 
 
 async function printerList() {
-  let allPrinters = [];
-  let maxID;
+  if (!dbAvailable) {
+    console.warn('Database not available, returning empty printer list');
+    return [];
+  }
+
+  const allPrinters = [];
+  let maxID = 0;
   try {
-    maxID = await db.promise().query('SELECT MAX(ID) AS maxid FROM printer');
+    const [rows] = await db.promise().query('SELECT MAX(ID) AS maxid FROM printer');
+    maxID = rows[0]?.maxid || 0;
   } catch (e) {
     console.error(e);
+    return allPrinters;
   }
-  for (i = 1; i < maxID[0][0].maxid + 1; i ++) {
+
+  for (let i = 1; i <= maxID; i++) {
     let printer, toner_black, toner_cyan, toner_yellow, toner_magenta;
     try {
       printer = await db.promise().query("SELECT * FROM printer WHERE ID = " + i);
@@ -28,8 +35,14 @@ async function printerList() {
       toner_magenta = await db.promise().query("SELECT * FROM magenta WHERE ID = " + i);
     } catch (e) {console.error(e) }
 
-      printer_toners = [printer[0][0], toner_yellow[0][0], toner_magenta[0][0], toner_cyan[0][0], toner_black[0][0]];
-      allPrinters.push(printer_toners);
+    const printer_toners = [
+      printer[0][0],
+      toner_yellow[0][0],
+      toner_magenta[0][0],
+      toner_cyan[0][0],
+      toner_black[0][0]
+    ];
+    allPrinters.push(printer_toners);
   }
   // console.log(allPrinters[0]);
   console.log("Lista stampanti generata");
