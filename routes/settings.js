@@ -20,12 +20,17 @@ let db = mysql.createPool({
 // });
 
 
-// non funziona
-async function takeSettings(db) {
-  let settings = await db.promise().query("SELECT * FROM setting");
-  return settings; 
+// Test database connection and return settings if available
+async function takeSettings(pool) {
+  try {
+    const [rows] = await pool.promise().query("SELECT * FROM setting");
+    return rows;
+  } catch (err) {
+    console.error('Error fetching settings:', err);
+    return [];
+  }
 }
-takeSettings(db);
+takeSettings(db).catch(() => {});
 
 let daysBack = 15;
 let veryOld = 60;

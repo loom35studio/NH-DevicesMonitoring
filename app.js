@@ -4,6 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const bodyParser = require('body-parser');
+const settings = require('./routes/settings.js');
+const pool = settings.db;
 
 var indexRouter = require('./routes/pages/index');    // ROUTER INDEX
 var logsRouter = require('./routes/pages/logs');      // ROUTER LOGS
@@ -48,10 +50,7 @@ const closePoolAndExit = async () => {
   try {
     await pool.end();
     console.log('Pool closed');
-    server.close(() => {
-      console.log('Server closed');
-      process.exit(0);
-    });
+    process.exit(0);
   } catch (err) {
     console.error('Error closing the pool', err);
     process.exit(1);
