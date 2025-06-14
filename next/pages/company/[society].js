@@ -2,8 +2,14 @@ import path from 'path';
 import simpleGit from 'simple-git';
 
 async function loadServerModule(relPath) {
-  const mod = await import(path.join(process.cwd(), relPath));
-  return mod.default || mod;
+  const full = path.resolve(process.cwd(), relPath);
+  try {
+    const mod = await import(full);
+    return mod.default || mod;
+  } catch (err) {
+    console.error('Failed loading', full, err);
+    throw err;
+  }
 }
 
 export async function getServerSideProps({ params }) {

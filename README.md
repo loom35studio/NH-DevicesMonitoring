@@ -8,13 +8,17 @@ routes but no longer serves any HTML views.
 
 - `npm run next:dev` – start the Next.js app in development mode
 - `npm run build` – create a production build of the Next.js interface
-- `npm run start` – start the Express API server (optional)
+- `npm run start` – start the Next.js server
+- `npm run express` – start the optional Express API server
 
 The backend relies on MySQL via the `mysql2` driver. If the connection fails the
 server falls back to a stub database so it can still start.
 
 Global styles are located under `next/styles/` and are imported in
 `next/pages/_app.js`.
+
+The layout includes a sidebar with icon links to the main sections of the
+dashboard. Hovering an icon reveals a tooltip with the section name.
 
 ### Authentication
 
