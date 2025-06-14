@@ -17,7 +17,9 @@ the app falls back to a stub database so it can still start.
 User accounts are stored in Redis. When the server starts an `Administrator`
 account is created with password `1q2w3e4r`. The Express routes under `/auth`
 provide registration and login endpoints used by the Next.js interface.
-The project currently expects Redis **5.5.6** or compatible.
+The project currently expects Redis **5.5.6** or compatible. Session data is
+stored using a small custom store built on the `redis` client so no
+`connect-redis` package is needed.
 
 ### Testing
 

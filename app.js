@@ -5,38 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const bodyParser = require('body-parser');
 const session = require('express-session');
-const connectRedisPkg = require('connect-redis');
-
-// Support various connect-redis export styles (function factory or class)
-let createStore = null;
-if (typeof connectRedisPkg === 'function') {
-  createStore = connectRedisPkg;
-} else if (connectRedisPkg && typeof connectRedisPkg.default === 'function') {
-  createStore = connectRedisPkg.default;
-} else if (
-  connectRedisPkg &&
-  connectRedisPkg.default &&
-  typeof connectRedisPkg.default.default === 'function'
-) {
-  createStore = connectRedisPkg.default.default;
-}
-
-let RedisStore;
-if (createStore) {
-  try {
-    // some versions return a constructor, others a factory
-    RedisStore = createStore(session);
-    if (typeof RedisStore !== 'function') {
-      RedisStore = createStore;
-    }
-  } catch (err) {
-    RedisStore = createStore;
-  }
-}
-
-if (typeof RedisStore !== 'function') {
-  throw new Error('Unsupported connect-redis export format');
-}
+const RedisStore = require('./utils/RedisStore');
 const settings = require('./routes/settings.js');
 const pool = settings.db;
 const auth = require('./routes/auth');
@@ -57,7 +26,7 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cookieParser());
-const redisStore = new RedisStore({ client: auth.client });
+const redisStore = new RedisStore(auth.client);
 app.use(session({
   store: redisStore,
   secret: 'secret-session',
