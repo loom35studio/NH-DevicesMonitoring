@@ -1,8 +1,15 @@
-import printerList from '../../../routes/printerList';
-import generateTxt from '../../../routes/generateTxt';
+import path from 'path';
 import simpleGit from 'simple-git';
 
+async function loadServerModule(relPath) {
+  const mod = await import(path.join(process.cwd(), relPath));
+  return mod.default || mod;
+}
+
 export async function getServerSideProps({ params }) {
+  const printerList = await loadServerModule('routes/printerList.js');
+  const generateTxt = await loadServerModule('routes/generateTxt.js');
+
   const allPrinters = await printerList();
   const printers = allPrinters.filter(p =>
     p[0].society && p[0].society.toLowerCase() === params.society.toLowerCase()
