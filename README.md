@@ -9,7 +9,7 @@ This project monitors printer devices with a user interface built entirely with 
 - `npm start` – run the production server
 
 The backend connects to MySQL via the `mysql2` driver. If the database is unavailable, a stub pool is used so the app can still start.
-Server-side helpers in `routes/` are imported using file URLs at runtime so Next.js can load modules located outside the `pages` directory.
+Server-side helpers in `routes/` are loaded at runtime from absolute paths using `path.resolve` and `import()`. This lets Next.js load modules that live outside the `pages` directory.
 
 Global styles are in `styles/` and loaded in `pages/_app.js`. The layout features a sidebar with icon links to the main sections of the dashboard.
 

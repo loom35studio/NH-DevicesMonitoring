@@ -1,23 +1,16 @@
 import simpleGit from 'simple-git';
-import { dirname, join } from 'path';
-import { fileURLToPath, pathToFileURL } from 'url';
-
-const here = dirname(fileURLToPath(import.meta.url));
+import { resolve } from 'path';
+import { pathToFileURL } from 'url';
 
 async function loadServerModule(relPath) {
-  const candidates = [
-    join(process.cwd(), relPath),
-    join(here, '../../..', relPath),
-  ];
-  for (const full of candidates) {
-    try {
-      const mod = await import(pathToFileURL(full).href);
-      return mod.default || mod;
-    } catch (err) {
-      // try next candidate
-    }
+  const full = resolve(process.cwd(), relPath);
+  try {
+    const mod = await import(pathToFileURL(full).href);
+    return mod.default || mod;
+  } catch (err) {
+    console.error('Failed loading', full, err);
+    throw new Error('Unable to load ' + relPath);
   }
-  throw new Error('Unable to load ' + relPath);
 }
 
 
