@@ -8,7 +8,7 @@ const session = require('express-session');
 const connectRedisPkg = require('connect-redis');
 const RedisStore = typeof connectRedisPkg === 'function'
   ? connectRedisPkg(session)
-  : connectRedisPkg.default;
+  : connectRedisPkg.default(session);
 const settings = require('./routes/settings.js');
 const pool = settings.db;
 const auth = require('./routes/auth');
