@@ -1,33 +1,20 @@
 # NH-DevicesMonitoring
 
-This project monitors printer devices. The interface is built with
-[Next.js](https://nextjs.org/) (tested on **14.2.5**). Express is still used
-for some backend API routes but no longer serves any HTML views.
+This project monitors printer devices with a user interface built entirely with [Next.js](https://nextjs.org/). The application no longer relies on Express; all pages and API routes live inside Next.js.
 
 ## Development
 
-- `npm run next:dev` – start the Next.js app in development mode
-- `npm run build` – create a production build of the Next.js interface
-- `npm run start` – start the Next.js server
-- `npm run express` – start the optional Express API server
+- `npm run dev` – start the Next.js app in development mode
+- `npm run build` – create a production build
+- `npm start` – run the production server
 
-The backend relies on MySQL via the `mysql2` driver. If the connection fails the
-server falls back to a stub database so it can still start.
+The backend connects to MySQL via the `mysql2` driver. If the database is unavailable, a stub pool is used so the app can still start.
 
-Global styles are located under `next/styles/` and are imported in
-`next/pages/_app.js`.
-
-The layout includes a sidebar with icon links to the main sections of the
-dashboard. Hovering an icon reveals a tooltip with the section name.
+Global styles are in `styles/` and loaded in `pages/_app.js`. The layout features a sidebar with icon links to the main sections of the dashboard.
 
 ### Authentication
 
-User accounts are stored in the MySQL database. The project no longer requires
-Redis for sessions or authentication.
-
-### Login table
-
-Create a table named `users` with a simple schema:
+User accounts are stored in a MySQL table `users`:
 
 ```sql
 CREATE TABLE users (
@@ -37,12 +24,8 @@ CREATE TABLE users (
 );
 ```
 
-Insert your administrator account as needed. The login page POSTs to
-`/api/login` and checks credentials against this table.
+The login page POSTs to `/api/login` and checks credentials against this table.
 
 ### Testing
 
-Run `npm test` to execute a very small test suite. The test checks that
-key application files exist and can be read. It does not start the server
-or perform integration tests, but it helps validate that the repository is
-set up correctly.
+Run `npm test` to execute a very small test suite that verifies key files exist and the `start` script launches Next.js.

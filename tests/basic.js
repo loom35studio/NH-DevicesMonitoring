@@ -2,8 +2,8 @@ const fs = require('fs');
 const assert = require('assert');
 const files = [
   'package.json',
-  'next/pages/index.js',
-  'next/pages/_app.js',
+  'pages/index.js',
+  'pages/_app.js',
 ];
 
 for (const f of files) {
@@ -11,6 +11,6 @@ for (const f of files) {
 }
 
 const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-assert.ok(pkg.scripts && pkg.scripts.start === 'next start next', 'start script should run Next.js');
+assert.ok(pkg.scripts && pkg.scripts.start === 'next start', 'start script should run Next.js');
 
 console.log('Basic file checks passed');
