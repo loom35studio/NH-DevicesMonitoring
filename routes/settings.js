@@ -1,4 +1,4 @@
-const { Pool } = require('pg');
+const mysql = require('mysql2/promise');
 
 const stubPool = {
   query: async () => [],
@@ -11,29 +11,24 @@ const stubPool = {
 const db = { ...stubPool };
 let dbAvailable = false;
 
-(function initPool() {
-  const pool = new Pool({
-    host: 'localhost',
-    user: 'postgres',
-    password: 'password',
-    database: 'nh_printchecker',
-    port: 5432,
-  });
-
-  pool.connect().then(client => {
+(async function initPool() {
+  try {
+    const pool = mysql.createPool({
+      host: 'localhost',
+      user: 'root',
+      password: 'NextHub01!',
+      database: 'nh_printchecker',
+      waitForConnections: true,
+      connectionLimit: 10,
+    });
+    await pool.getConnection();
     dbAvailable = true;
     db.query = pool.query.bind(pool);
     db.end = pool.end.bind(pool);
-    db.promise = () => ({
-      query: async (sql, params) => {
-        const res = await pool.query(sql, params);
-        return [res.rows, res.fields];
-      }
-    });
-    client.release();
-  }).catch(err => {
+    db.promise = () => pool;
+  } catch (err) {
     console.warn('Database connection failed, running without DB:', err.code);
-  });
+  }
 })();
 
 async function takeSettings(pool) {
@@ -52,7 +47,6 @@ let daysBack = 15;
 let veryOld = 60;
 let below = 5000;
 let interval = 600000;
-
 
 module.exports = {
   db,

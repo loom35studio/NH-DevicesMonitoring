@@ -9,17 +9,13 @@ API functionality.
 - `npm run next:dev` – start the Next.js app in development mode
 - `npm run start` – start the Express API server (optional)
 
-The backend now uses PostgreSQL via the `pg` module. If the connection fails
-the app falls back to a stub database so it can still start.
+The backend relies on MySQL via the `mysql2` driver. If the connection fails the
+server falls back to a stub database so it can still start.
 
 ### Authentication
 
-User accounts are stored in Redis. When the server starts an `Administrator`
-account is created with password `1q2w3e4r`. The Express routes under `/auth`
-provide registration and login endpoints used by the Next.js interface.
-The project currently expects Redis **5.5.6** or compatible. Session data is
-stored using a small custom store built on the `redis` client so no
-`connect-redis` package is needed.
+User accounts are stored in the MySQL database. The project no longer requires
+Redis for sessions or authentication.
 
 ### Testing
 
