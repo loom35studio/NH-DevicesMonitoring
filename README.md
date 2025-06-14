@@ -9,8 +9,8 @@ API functionality.
 - `npm run next:dev` – start the Next.js app in development mode
 - `npm run start` – start the Express API server (optional)
 
-The server can run without a database installed. Database interactions are
-skipped when the connection is unavailable.
+The backend now uses PostgreSQL via the `pg` module. If the connection fails
+the app falls back to a stub database so it can still start.
 
 ### Authentication
 

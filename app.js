@@ -5,18 +5,9 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const bodyParser = require('body-parser');
 const session = require('express-session');
-const connectRedisPkg = require('connect-redis');
-let RedisStore;
-if (typeof connectRedisPkg === 'function') {
-  // connect-redis v5/v6 export a function requiring the session module
-  RedisStore = connectRedisPkg(session);
-} else if (connectRedisPkg && typeof connectRedisPkg.default === 'function') {
-  // connect-redis v8 uses a default export with the store class
-  RedisStore = connectRedisPkg.default;
-} else {
-  // fallback if the package exports the store class directly
-  RedisStore = connectRedisPkg;
-}
+const connectRedis = require('connect-redis');
+const RedisStore = connectRedis.default ||
+  (typeof connectRedis === 'function' ? connectRedis(session) : connectRedis);
 const settings = require('./routes/settings.js');
 const pool = settings.db;
 const auth = require('./routes/auth');
