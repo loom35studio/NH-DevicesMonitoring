@@ -14,7 +14,7 @@ export default function Layout({ children }) {
         <div className="logo">NH Monitoring</div>
         <nav className="nav">
           <ul>
-            {menu.map(item => (
+            {menu.map((item) => (
               <li key={item.href}>
                 <Link href={item.href} className="sidebar_item">
                   <i className={item.icon} aria-hidden="true" />
@@ -24,6 +24,10 @@ export default function Layout({ children }) {
             ))}
           </ul>
         </nav>
+        <a href="/api/download" className="sidebar_item download">
+          <i className="fas fa-download" aria-hidden="true" />
+          <span className="tooltip">Download</span>
+        </a>
         <div className="user">
           <i className="fas fa-user-circle" aria-hidden="true" />
         </div>

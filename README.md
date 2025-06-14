@@ -11,7 +11,7 @@ This project monitors printer devices with a user interface built entirely with 
 The backend connects to MySQL via the `mysql2` driver. If the database is unavailable, a stub pool is used so the app can still start.
 Server-side helpers in `routes/` are imported using the `@routes` alias configured in `next.config.js`. This alias points to the root `routes` folder so the modules can be statically imported from Next.js pages.
 
-Global styles are in `styles/` and loaded in `pages/_app.js`. The layout features a light-themed sidebar with icon links. The top link goes to the **Dashboard**, the second to **Società** (company list), followed by **Storico Consegne** and **Amministrazione**. A user icon sits at the bottom of the sidebar.
+Global styles are in `styles/` and loaded in `pages/_app.js`. The interface now presents a compact gradient sidebar on the left with only icons. Tooltips reveal labels for **Dashboard**, **Società**, **Storico Consegne** and **Amministrazione**. At the bottom are a download button and a user icon.
 
 The home page now serves as the dashboard. The previous company selection page is available at `/societa` and presents clickable cards for Elite, Pewex and Gruppo Stefanelli.
 
