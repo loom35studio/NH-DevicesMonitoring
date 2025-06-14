@@ -36,6 +36,7 @@
     "serverstart": "DEBUG=express-locallibrary-tutorial:* npm run devstart",
     "next:dev": "next dev next",
     "next:build": "next build next",
-    "next:start": "next start next"
+    "next:start": "next start next",
+    "test": "echo \"No tests specified\" && exit 0"
   }
 }
