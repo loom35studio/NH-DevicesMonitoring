@@ -19,7 +19,7 @@
     "puppeteer": "^22.10.0",
     "simple-git": "^3.24.0",
     "tabulator-tables": "^6.2.1",
-    "redis": "^4.6.7",
+    "redis": "^8.2.0",
     "express-session": "^1.17.3",
     "connect-redis": "^7.2.0",
     "bcryptjs": "^2.4.3",
