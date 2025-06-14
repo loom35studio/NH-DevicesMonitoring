@@ -4,8 +4,11 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const bodyParser = require('body-parser');
+const session = require('express-session');
+const RedisStore = require('connect-redis').default;
 const settings = require('./routes/settings.js');
 const pool = settings.db;
+const auth = require('./routes/auth');
 
 var indexRouter = require('./routes/pages/index');    // ROUTER INDEX
 var logsRouter = require('./routes/pages/logs');      // ROUTER LOGS
@@ -23,12 +26,20 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cookieParser());
+const redisStore = new RedisStore({ client: auth.client });
+app.use(session({
+  store: redisStore,
+  secret: 'secret-session',
+  resave: false,
+  saveUninitialized: false,
+}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/logs', logsRouter);
 app.use('/admin', adminRouter);
 app.use('/company', companyRouter);
+app.use('/auth', auth.router);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
