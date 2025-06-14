@@ -21,7 +21,7 @@
     "tabulator-tables": "^6.2.1",
     "redis": "^8.2.0",
     "express-session": "^1.17.3",
-    "connect-redis": "^7.2.0",
+    "connect-redis": "^8.0.2",
     "bcryptjs": "^2.4.3",
     "next": "^14.1.4",
     "react": "^18.2.0",
