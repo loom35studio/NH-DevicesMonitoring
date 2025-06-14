@@ -1,31 +1,47 @@
-const mysql = require("mysql2");
+const mysql = require('mysql2/promise');
 
-let db = mysql.createPool({
-    multipleStatements: true,
-    host: "localhost",
-    user: "root",
-    password: 'NextHub01!',
-    database: "nh_printchecker",
-    waitForConnections: true,
-    connectionLimit: 10,
-    queueLimit: 0
-});
+const stubPool = {
+  query: async () => [],
+  end: async () => {},
+  promise() {
+    return { query: async () => [[], []] };
+  }
+};
 
-// db.connect((err) => {
-//     if (err) {
-//       console.log("Errore durante la connessione al database:", err);
-//     } else {
-//       console.log("Connessione stabilita al database");
-//     }
-// });
+const db = { ...stubPool };
+let dbAvailable = false;
 
+(async function initPool() {
+  try {
+    const pool = mysql.createPool({
+      host: 'localhost',
+      user: 'root',
+      password: 'NextHub01!',
+      database: 'nh_printchecker',
+      waitForConnections: true,
+      connectionLimit: 10,
+    });
+    await pool.getConnection();
+    dbAvailable = true;
+    db.query = pool.query.bind(pool);
+    db.end = pool.end.bind(pool);
+    db.promise = () => pool;
+  } catch (err) {
+    console.warn('Database connection failed, running without DB:', err.code);
+  }
+})();
 
-// non funziona
-async function takeSettings(db) {
-  let settings = await db.promise().query("SELECT * FROM setting");
-  return settings; 
+async function takeSettings(pool) {
+  try {
+    const [rows] = await pool.promise().query('SELECT * FROM setting');
+    return rows;
+  } catch (err) {
+    console.error('Error fetching settings:', err);
+    return [];
+  }
 }
-takeSettings(db);
+
+takeSettings(db).catch(() => {});
 
 let daysBack = 15;
 let veryOld = 60;
@@ -34,9 +50,9 @@ let interval = 600000;
 
 module.exports = {
   db,
+  dbAvailable,
   daysBack,
   veryOld,
   below,
   interval,
 };
- 

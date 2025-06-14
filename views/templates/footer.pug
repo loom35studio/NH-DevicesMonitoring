@@ -26,12 +26,15 @@ div(id="changelog", class= "popup")
                     i.fa.fa-times(aria-hidden='true')
         div.popup_body
             ul
-                each commit in commits
-                    li
-                        strong Data: 
-                        | #{commit.date}
-                        br
-                        strong Update: 
-                        | #{commit.message}
-                        br
-                        br
+                if commits
+                    each commit in commits
+                        li
+                            strong Data:
+                            | #{commit.date}
+                            br
+                            strong Update:
+                            | #{commit.message}
+                            br
+                            br
+                else
+                    li Nessun changelog disponibile

@@ -12,13 +12,15 @@
     "googleapis": "^133.0.0",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
-    "mysql": "^2.18.1",
-    "mysql2": "^3.9.2",
+    "mysql2": "^3.9.7",
     "net-snmp": "^3.10.3",
     "pug": "^3.0.2",
     "puppeteer": "^22.10.0",
     "simple-git": "^3.24.0",
-    "tabulator-tables": "^6.2.1"
+    "tabulator-tables": "^6.2.1",
+    "next": "^14.1.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.3"
@@ -26,6 +28,10 @@
   "scripts": {
     "start": "node ./bin/www",
     "devstart": "nodemon ./bin/www",
-    "serverstart": "DEBUG=express-locallibrary-tutorial:* npm run devstart"
+    "serverstart": "DEBUG=express-locallibrary-tutorial:* npm run devstart",
+    "next:dev": "next dev next",
+    "next:build": "next build next",
+    "next:start": "next start next",
+    "test": "node tests/basic.js"
   }
 }

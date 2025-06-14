@@ -4,10 +4,13 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const bodyParser = require('body-parser');
+const settings = require('./routes/settings.js');
+const pool = settings.db;
 
 var indexRouter = require('./routes/pages/index');    // ROUTER INDEX
 var logsRouter = require('./routes/pages/logs');      // ROUTER LOGS
-var adminRouter = require('./routes/pages/admin');    // ROUTER ADMIN PANEL
+var adminRouter = require('./routes/pages/admin');
+var companyRouter = require("./routes/pages/company");    // ROUTER COMPANY
 
 var app = express();
 process.setMaxListeners(0);
@@ -25,6 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/logs', logsRouter);
 app.use('/admin', adminRouter);
+app.use('/company', companyRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -46,12 +50,11 @@ app.use(function(err, req, res, next) {
 // Funzione per chiudere il pool di connessioni
 const closePoolAndExit = async () => {
   try {
-    await pool.end();
+    if (settings.dbAvailable) {
+      await pool.end();
+    }
     console.log('Pool closed');
-    server.close(() => {
-      console.log('Server closed');
-      process.exit(0);
-    });
+    process.exit(0);
   } catch (err) {
     console.error('Error closing the pool', err);
     process.exit(1);
