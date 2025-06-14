@@ -1,10 +1,11 @@
 import path from 'path';
+import { pathToFileURL } from 'url';
 import simpleGit from 'simple-git';
 
 async function loadServerModule(relPath) {
   const full = path.resolve(process.cwd(), relPath);
   try {
-    const mod = await import(full);
+    const mod = await import(pathToFileURL(full));
     return mod.default || mod;
   } catch (err) {
     console.error('Failed loading', full, err);

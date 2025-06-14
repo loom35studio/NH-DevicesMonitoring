@@ -1,8 +1,8 @@
 # NH-DevicesMonitoring
 
 This project monitors printer devices. The interface is built with
-[Next.js](https://nextjs.org/). Express is still used for some backend API
-routes but no longer serves any HTML views.
+[Next.js](https://nextjs.org/) (tested on **14.2.5**). Express is still used
+for some backend API routes but no longer serves any HTML views.
 
 ## Development
 
