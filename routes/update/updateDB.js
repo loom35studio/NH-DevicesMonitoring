@@ -1,18 +1,33 @@
 const snmp = require("net-snmp");
-const settings = require('../settings.js');
+const { db, dbAvailable } = require('../settings.js');
 const getOids = require('../oids.js');
 const check477 = require('./update477.js');
 const checkMFP = require('./updateMFP.js');
 const checkBlacks = require('./updateBlacks.js');
-let db = settings.db;
 
 
 async function updateDB() {
+    if (!dbAvailable) {
+        console.warn('Database not available, skipping updateDB');
+        return;
+    }
+
     let printersOnline = 0;
-    let printers = await db.promise().query('SELECT * FROM printer');
-    let maxID = await db.promise().query('SELECT MAX(ID) AS maxid FROM printer');
-    for (i = 0; i < maxID[0][0].maxid; i ++) {
-        let printer = printers[0][i];
+    let printers = [];
+    let maxId = 0;
+    try {
+        const [printerRows] = await db.promise().query('SELECT * FROM printer');
+        printers = printerRows;
+        const [maxRows] = await db.promise().query('SELECT MAX(ID) AS maxid FROM printer');
+        maxId = maxRows[0]?.maxid || 0;
+    } catch (err) {
+        console.error(err);
+        return;
+    }
+
+    for (let i = 0; i < maxId; i++) {
+        const printer = printers[i];
+        if (!printer) continue;
         let oids = getOids(printer);
         let session= snmp.createSession( printer.ip, "public" );
         session.get( oids, function (e,vb) {
