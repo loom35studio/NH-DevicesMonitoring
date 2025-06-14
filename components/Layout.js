@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import Breadcrumbs from './Breadcrumbs';
 
 const menu = [
   { href: '/', icon: 'fas fa-chart-line', label: 'Dashboard' },
@@ -8,31 +10,37 @@ const menu = [
 ];
 
 export default function Layout({ children }) {
+  const router = useRouter();
   return (
     <div className="dashboard">
-      <aside className="sidebar">
+      <aside className="sidebar glass">
         <div className="logo">NH Monitoring</div>
         <nav className="nav">
           <ul>
             {menu.map((item) => (
               <li key={item.href}>
-                <Link href={item.href} className="sidebar_item">
+                <Link
+                  href={item.href}
+                  className={`sidebar_item${
+                    router.pathname === item.href ? ' active' : ''
+                  }`}
+                >
                   <i className={item.icon} aria-hidden="true" />
-                  <span className="tooltip">{item.label}</span>
+                  <span className="label">{item.label}</span>
                 </Link>
               </li>
             ))}
           </ul>
         </nav>
-        <a href="/api/download" className="sidebar_item download">
-          <i className="fas fa-download" aria-hidden="true" />
-          <span className="tooltip">Download</span>
-        </a>
-        <div className="user">
-          <i className="fas fa-user-circle" aria-hidden="true" />
-        </div>
+        <Link href="/user" className="user">
+          <img src="/images/background.svg" alt="User" className="avatar" />
+          <span className="username">Admin</span>
+        </Link>
       </aside>
-      <main className="main">{children}</main>
+      <main className="main">
+        <Breadcrumbs />
+        {children}
+      </main>
     </div>
   );
 }

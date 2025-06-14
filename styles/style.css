@@ -1,10 +1,10 @@
 :root {
-  --bg: #f8fafd;
-  --sidebar-gradient-start: #4b6cb7;
-  --sidebar-gradient-end: #182848;
-  --primary: #2196f3;
-  --accent: #2ecc71;
+  --bg: #e4eef6;
+  --sidebar-bg: rgba(255, 255, 255, 0.8);
+  --primary: #4aa3df;
   --text: #333;
+  --active-bg: rgba(0, 0, 0, 0.1);
+  --box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 body {
@@ -20,8 +20,10 @@ body {
 }
 
 .sidebar {
-  width: 80px;
-  background: linear-gradient(180deg, var(--sidebar-gradient-start), var(--sidebar-gradient-end));
+  width: 200px;
+  background: var(--sidebar-bg);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--box-shadow);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,49 +50,26 @@ body {
 .sidebar_item {
   width: 100%;
   display: flex;
-  justify-content: center;
-  position: relative;
-  color: #fff;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text);
   text-decoration: none;
-  padding: 1rem 0;
+  padding: 0.75rem 1rem;
   border-radius: 12px;
   transition: background 0.2s;
 }
 
 .sidebar_item:hover {
-  background: rgba(255,255,255,0.15);
+  background: var(--active-bg);
+}
+
+.sidebar_item.active {
+  background: var(--active-bg);
+  font-weight: bold;
 }
 
 .sidebar_item i {
   font-size: 1.2rem;
-}
-
-.tooltip {
-  position: absolute;
-  left: calc(100% + 8px);
-  top: 50%;
-  transform: translateY(-50%);
-  background: #fff;
-  color: var(--text);
-  padding: 4px 8px;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s;
-  font-size: 0.75rem;
-}
-
-.sidebar_item:hover .tooltip {
-  opacity: 1;
-}
-
-.download {
-  margin-top: auto;
-  width: 100%;
-  display: flex;
-  justify-content: center;
 }
 
 .user {
@@ -98,14 +77,32 @@ body {
   padding-top: 1rem;
 }
 
-.user i {
-  font-size: 1.5rem;
-  color: #fff;
+.user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text);
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.user .avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.25rem;
+}
+
+.user .username {
+  font-size: 0.9rem;
 }
 
 .main {
   flex: 1;
   padding: 2rem;
+  backdrop-filter: blur(8px);
 }
 
 .company_cards {
@@ -157,3 +154,8 @@ body {
 .login_form button:hover {
   background: #1976d2;
 }
+
+.breadcrumbs { margin-bottom: 1rem; font-size: 0.9rem; }
+.breadcrumbs .crumb a { color: var(--text); text-decoration: none; }
+.breadcrumbs .crumb a:hover { text-decoration: underline; }
+
