@@ -6,8 +6,25 @@ var logger = require('morgan');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const connectRedis = require('connect-redis');
-const RedisStore = connectRedis.default ||
-  (typeof connectRedis === 'function' ? connectRedis(session) : connectRedis);
+let RedisStore;
+if (typeof connectRedis === 'function') {
+  // connect-redis v6/v7 expose a factory function
+  RedisStore = connectRedis(session);
+} else if (connectRedis && typeof connectRedis.default === 'function') {
+  try {
+    // v8 exports a default factory function; call it first
+    RedisStore = connectRedis.default(session);
+    if (typeof RedisStore !== 'function') {
+      // default export might already be the constructor
+      RedisStore = connectRedis.default;
+    }
+  } catch (err) {
+    // default export is the constructor class
+    RedisStore = connectRedis.default;
+  }
+} else {
+  throw new Error('Unsupported connect-redis export format');
+}
 const settings = require('./routes/settings.js');
 const pool = settings.db;
 const auth = require('./routes/auth');
