@@ -5,24 +5,36 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const bodyParser = require('body-parser');
 const session = require('express-session');
-const connectRedis = require('connect-redis');
+const connectRedisPkg = require('connect-redis');
+
+// Support various connect-redis export styles (function factory or class)
+let createStore = null;
+if (typeof connectRedisPkg === 'function') {
+  createStore = connectRedisPkg;
+} else if (connectRedisPkg && typeof connectRedisPkg.default === 'function') {
+  createStore = connectRedisPkg.default;
+} else if (
+  connectRedisPkg &&
+  connectRedisPkg.default &&
+  typeof connectRedisPkg.default.default === 'function'
+) {
+  createStore = connectRedisPkg.default.default;
+}
+
 let RedisStore;
-if (typeof connectRedis === 'function') {
-  // connect-redis v6/v7 expose a factory function
-  RedisStore = connectRedis(session);
-} else if (connectRedis && typeof connectRedis.default === 'function') {
+if (createStore) {
   try {
-    // v8 exports a default factory function; call it first
-    RedisStore = connectRedis.default(session);
+    // some versions return a constructor, others a factory
+    RedisStore = createStore(session);
     if (typeof RedisStore !== 'function') {
-      // default export might already be the constructor
-      RedisStore = connectRedis.default;
+      RedisStore = createStore;
     }
   } catch (err) {
-    // default export is the constructor class
-    RedisStore = connectRedis.default;
+    RedisStore = createStore;
   }
-} else {
+}
+
+if (typeof RedisStore !== 'function') {
   throw new Error('Unsupported connect-redis export format');
 }
 const settings = require('./routes/settings.js');
