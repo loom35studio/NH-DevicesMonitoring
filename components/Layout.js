@@ -1,17 +1,18 @@
 import Link from 'next/link';
 
 const menu = [
-  { href: '/', icon: 'fa fa-dashboard', label: 'Board' },
-  { href: '/company/Elite', icon: 'fa fa-building', label: 'Societá' },
-  { href: '/logs', icon: 'fa fa-history', label: 'Storico' },
-  { href: '/admin', icon: 'fa fa-user', label: 'Amministrazione' }
+  { href: '/', icon: 'fas fa-chart-line', label: 'Dashboard' },
+  { href: '/societa', icon: 'fas fa-building', label: 'Societá' },
+  { href: '/storico', icon: 'fas fa-clock-rotate-left', label: 'Storico Consegne' },
+  { href: '/admin', icon: 'fas fa-user-cog', label: 'Amministrazione' }
 ];
 
 export default function Layout({ children }) {
   return (
     <div className="dashboard">
       <aside className="sidebar">
-        <nav>
+        <div className="logo">NH Monitoring</div>
+        <nav className="nav">
           <ul>
             {menu.map(item => (
               <li key={item.href}>
@@ -23,11 +24,8 @@ export default function Layout({ children }) {
             ))}
           </ul>
         </nav>
-        <div className="download">
-          <a href="/download/report.txt" className="sidebar_item">
-            <i className="fa fa-download" aria-hidden="true" />
-            <span className="tooltip">Download</span>
-          </a>
+        <div className="user">
+          <i className="fas fa-user-circle" aria-hidden="true" />
         </div>
       </aside>
       <main className="main">{children}</main>
