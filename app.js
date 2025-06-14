@@ -5,8 +5,10 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const bodyParser = require('body-parser');
 const session = require('express-session');
-const connectRedis = require('connect-redis');
-const RedisStore = (connectRedis.default || connectRedis)(session);
+const connectRedisPkg = require('connect-redis');
+const RedisStore = typeof connectRedisPkg === 'function'
+  ? connectRedisPkg(session)
+  : connectRedisPkg.default;
 const settings = require('./routes/settings.js');
 const pool = settings.db;
 const auth = require('./routes/auth');

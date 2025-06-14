@@ -21,6 +21,7 @@ The project currently expects Redis **5.5.6** or compatible.
 
 ### Testing
 
-Run `npm test` to verify that Node and npm are installed. No automated
-tests are included yet, so the script simply prints a message and exits
-successfully.
+Run `npm test` to execute a very small test suite. The test checks that
+key application files exist and can be read. It does not start the server
+or perform integration tests, but it helps validate that the repository is
+set up correctly.

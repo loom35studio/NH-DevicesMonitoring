@@ -37,6 +37,6 @@
     "next:dev": "next dev next",
     "next:build": "next build next",
     "next:start": "next start next",
-    "test": "echo \"No tests specified\" && exit 0"
+    "test": "node tests/basic.js"
   }
 }
