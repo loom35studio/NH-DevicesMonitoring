@@ -1,23 +1,9 @@
 import simpleGit from 'simple-git';
-import { resolve } from 'path';
-import { pathToFileURL } from 'url';
-
-async function loadServerModule(relPath) {
-  const full = resolve(process.cwd(), relPath);
-  try {
-    const mod = await import(pathToFileURL(full).href);
-    return mod.default || mod;
-  } catch (err) {
-    console.error('Failed loading', full, err);
-    throw new Error('Unable to load ' + relPath);
-  }
-}
+import printerList from '@routes/printerList';
+import generateTxt from '@routes/generateTxt';
 
 
 export async function getServerSideProps({ params }) {
-  const printerList = await loadServerModule('routes/printerList.js');
-  const generateTxt = await loadServerModule('routes/generateTxt.js');
-
   const allPrinters = await printerList();
   const printers = allPrinters.filter(p =>
     p[0].society && p[0].society.toLowerCase() === params.society.toLowerCase()
