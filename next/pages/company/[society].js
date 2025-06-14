@@ -1,5 +1,5 @@
-import printerList from '../../routes/printerList';
-import generateTxt from '../../routes/generateTxt';
+import printerList from '../../../routes/printerList';
+import generateTxt from '../../../routes/generateTxt';
 import simpleGit from 'simple-git';
 
 export async function getServerSideProps({ params }) {
