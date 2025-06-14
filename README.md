@@ -17,6 +17,21 @@ server falls back to a stub database so it can still start.
 User accounts are stored in the MySQL database. The project no longer requires
 Redis for sessions or authentication.
 
+### Login table
+
+Create a table named `users` with a simple schema:
+
+```sql
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(100) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL
+);
+```
+
+Insert your administrator account as needed. The login page POSTs to
+`/api/login` and checks credentials against this table.
+
 ### Testing
 
 Run `npm test` to execute a very small test suite. The test checks that

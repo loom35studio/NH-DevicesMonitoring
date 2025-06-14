@@ -67,10 +67,41 @@ body {
     flex-direction: column;
 }
 
-.sidebar a {
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 40px;
     color: #fff;
     text-decoration: none;
-    margin: 0.5rem 0;
+}
+
+.sidebar_item i {
+    font-size: 20px;
+}
+
+.tooltip {
+    visibility: hidden;
+    position: absolute;
+    left: 100%;
+    margin-left: 0.5rem;
+    background: #333;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-size: 12px;
+}
+
+.sidebar_item:hover .tooltip {
+    visibility: visible;
 }
 
 .sidebar .download {
