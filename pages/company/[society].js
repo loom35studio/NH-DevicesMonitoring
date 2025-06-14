@@ -1,21 +1,30 @@
-import path from 'path';
-import { pathToFileURL } from 'url';
 import simpleGit from 'simple-git';
+import { createRequire } from 'module';
+import { dirname, join } from 'path';
+import { fileURLToPath } from 'url';
 
-async function loadServerModule(relPath) {
-  const full = path.resolve(process.cwd(), relPath);
-  try {
-    const mod = await import(pathToFileURL(full));
-    return mod.default || mod;
-  } catch (err) {
-    console.error('Failed loading', full, err);
-    throw err;
+const require = createRequire(import.meta.url);
+const here = dirname(fileURLToPath(import.meta.url));
+
+function loadServerModule(relPath) {
+  const candidates = [
+    join(process.cwd(), relPath),
+    join(here, '../../..', relPath),
+  ];
+  for (const full of candidates) {
+    try {
+      return require(full);
+    } catch (err) {
+      // try next candidate
+    }
   }
+  throw new Error('Unable to load ' + relPath);
 }
 
+
 export async function getServerSideProps({ params }) {
-  const printerList = await loadServerModule('routes/printerList.js');
-  const generateTxt = await loadServerModule('routes/generateTxt.js');
+  const printerList = loadServerModule('routes/printerList.js');
+  const generateTxt = loadServerModule('routes/generateTxt.js');
 
   const allPrinters = await printerList();
   const printers = allPrinters.filter(p =>
