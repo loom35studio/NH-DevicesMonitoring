@@ -7,6 +7,7 @@ routes but no longer serves any HTML views.
 ## Development
 
 - `npm run next:dev` – start the Next.js app in development mode
+- `npm run build` – create a production build of the Next.js interface
 - `npm run start` – start the Express API server (optional)
 
 The backend relies on MySQL via the `mysql2` driver. If the connection fails the
