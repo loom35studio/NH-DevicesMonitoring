@@ -9,7 +9,8 @@ const pool = settings.db;
 
 var indexRouter = require('./routes/pages/index');    // ROUTER INDEX
 var logsRouter = require('./routes/pages/logs');      // ROUTER LOGS
-var adminRouter = require('./routes/pages/admin');    // ROUTER ADMIN PANEL
+var adminRouter = require('./routes/pages/admin');
+var companyRouter = require("./routes/pages/company");    // ROUTER COMPANY
 
 var app = express();
 process.setMaxListeners(0);
@@ -27,6 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/logs', logsRouter);
 app.use('/admin', adminRouter);
+app.use('/company', companyRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
