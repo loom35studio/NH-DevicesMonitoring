@@ -1,4 +1,4 @@
-import { db, dbAvailable } from '../../../routes/settings.js';
+import { db, dbAvailable } from '../../routes/settings.js';
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
