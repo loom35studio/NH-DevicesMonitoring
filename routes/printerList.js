@@ -1,52 +1,26 @@
 const { db, dbAvailable } = require('./settings.js');
 
-
-async function printerList() {
+async function getAllPrinters() {
   if (!dbAvailable) {
     console.warn('Database not available, returning empty printer list');
     return [];
   }
-
-  const allPrinters = [];
-  let maxID = 0;
-  try {
-    const [rows] = await db.promise().query('SELECT MAX(ID) AS maxid FROM printer');
-    maxID = rows[0]?.maxid || 0;
-  } catch (e) {
-    console.error(e);
-    return allPrinters;
-  }
-
-  for (let i = 1; i <= maxID; i++) {
-    let printer, toner_black, toner_cyan, toner_yellow, toner_magenta;
-    try {
-      printer = await db.promise().query("SELECT * FROM printer WHERE ID = " + i);
-    } catch (e) {console.error(e) }
-    try {
-      toner_black = await db.promise().query("SELECT * FROM black WHERE ID = " + i);
-    } catch (e) {console.error(e) }
-    try {
-      toner_cyan = await db.promise().query("SELECT * FROM cyan WHERE ID = " + i);
-    } catch (e) {console.error(e) }
-    try {
-      toner_yellow = await db.promise().query("SELECT * FROM yellow WHERE ID = " + i);
-    } catch (e) {console.error(e) }
-    try {
-      toner_magenta = await db.promise().query("SELECT * FROM magenta WHERE ID = " + i);
-    } catch (e) {console.error(e) }
-
-    const printer_toners = [
-      printer[0][0],
-      toner_yellow[0][0],
-      toner_magenta[0][0],
-      toner_cyan[0][0],
-      toner_black[0][0]
-    ];
-    allPrinters.push(printer_toners);
-  }
-  // console.log(allPrinters[0]);
-  console.log("Lista stampanti generata");
-  return allPrinters;
+  const sql = `SELECT p.*,\n      b.pages AS black_pages, b.percentage AS black_percentage,\n      c.pages AS cyan_pages, c.percentage AS cyan_percentage,\n      y.pages AS yellow_pages, y.percentage AS yellow_percentage,\n      m.pages AS magenta_pages, m.percentage AS magenta_percentage\n    FROM printer p\n    LEFT JOIN black b ON b.printerID = p.ID\n    LEFT JOIN cyan c ON c.printerID = p.ID\n    LEFT JOIN yellow y ON y.printerID = p.ID\n    LEFT JOIN magenta m ON m.printerID = p.ID\n    ORDER BY p.ID`;
+  const [rows] = await db.promise().query(sql);
+  return rows;
 }
 
-module.exports = printerList;
+async function getPrintersBySociety(society) {
+  if (!dbAvailable) {
+    console.warn('Database not available, returning empty printer list');
+    return [];
+  }
+  const sql = `SELECT p.*,\n      b.pages AS black_pages, b.percentage AS black_percentage,\n      c.pages AS cyan_pages, c.percentage AS cyan_percentage,\n      y.pages AS yellow_pages, y.percentage AS yellow_percentage,\n      m.pages AS magenta_pages, m.percentage AS magenta_percentage\n    FROM printer p\n    LEFT JOIN black b ON b.printerID = p.ID\n    LEFT JOIN cyan c ON c.printerID = p.ID\n    LEFT JOIN yellow y ON y.printerID = p.ID\n    LEFT JOIN magenta m ON m.printerID = p.ID\n    WHERE LOWER(p.society) = LOWER(?)\n    ORDER BY p.ID`;
+  const [rows] = await db.promise().query(sql, [society]);
+  return rows;
+}
+
+module.exports = {
+  getAllPrinters,
+  getPrintersBySociety,
+};

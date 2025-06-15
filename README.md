@@ -37,7 +37,7 @@ The interface uses these main colors:
 - Secondary text: `#a3a4c4`
 - Titles: dark blue (`#003366`)
 
-The home page now serves as the dashboard. Breadcrumbs indicate where you are. The company selection page at `/societa` presents clickable cards for Elite, Pewex and Gruppo Stefanelli.
+The home page now serves as the dashboard. Breadcrumbs indicate where you are. The company selection page at `/societa` presents clickable cards for Elite, Pewex and Gruppo Stefanelli. Selecting a company shows a table of its printers with toner percentages.
 
 The dashboard shows animated statistics and two sample charts built with
 `react-chartjs-2` and `react-circular-progressbar`.

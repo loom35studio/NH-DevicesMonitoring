@@ -1,23 +1,9 @@
-import simpleGit from 'simple-git';
-import printerList from '@routes/printerList';
-import generateTxt from '@routes/generateTxt';
+import { getPrintersBySociety } from '@routes/printerList';
 
 
 export async function getServerSideProps({ params }) {
-  const allPrinters = await printerList();
-  const printers = allPrinters.filter(p =>
-    p[0].society && p[0].society.toLowerCase() === params.society.toLowerCase()
-  );
-  const txt = await generateTxt(printers);
-  const git = simpleGit();
-  const log = await git.log();
-  const commits = log.all.map(c => ({
-    hash: c.hash,
-    date: c.date,
-    message: c.message,
-    author: c.author_name,
-  }));
-  return { props: { printers, txt, commits, company: params.society } };
+  const printers = await getPrintersBySociety(params.society);
+  return { props: { printers, company: params.society } };
 }
 
 export default function Company({ company, printers }) {
@@ -26,11 +12,34 @@ export default function Company({ company, printers }) {
       <header>
         <h1>{company}</h1>
       </header>
-      <ul className="device_container">
-        {printers.map((prnt) => (
-          <li key={prnt[0].ID}>{prnt[0].name} {prnt[0].model}</li>
-        ))}
-      </ul>
+      {printers.length === 0 ? (
+        <p>Nessuna stampante trovata</p>
+      ) : (
+        <table className="printers">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Modello</th>
+              <th>Giallo %</th>
+              <th>Magenta %</th>
+              <th>Ciano %</th>
+              <th>Nero %</th>
+            </tr>
+          </thead>
+          <tbody>
+            {printers.map(pr => (
+              <tr key={pr.ID}>
+                <td>{pr.name}</td>
+                <td>{pr.model}</td>
+                <td>{pr.yellow_percentage ?? '—'}</td>
+                <td>{pr.magenta_percentage ?? '—'}</td>
+                <td>{pr.cyan_percentage ?? '—'}</td>
+                <td>{pr.black_percentage ?? '—'}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
     </main>
   );
 }
