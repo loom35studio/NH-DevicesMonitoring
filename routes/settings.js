@@ -10,11 +10,13 @@ const stubPool = {
 
 const db = { ...stubPool };
 let dbAvailable = false;
+let pool;
 
 (async function initPool() {
   try {
-    const pool = mysql.createPool({
-      host: 'localhost',
+    pool = mysql.createPool({
+      host: '127.0.0.1',
+      port: 3306,
       user: 'root',
       password: '',
       database: 'nh_printchecker',
