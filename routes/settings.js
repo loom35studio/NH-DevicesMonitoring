@@ -16,7 +16,7 @@ let dbAvailable = false;
     const pool = mysql.createPool({
       host: 'localhost',
       user: 'root',
-      password: 'NextHub01!',
+      password: '',
       database: 'nh_printchecker',
       waitForConnections: true,
       connectionLimit: 10,

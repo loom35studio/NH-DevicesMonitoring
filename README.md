@@ -8,10 +8,16 @@ This project monitors printer devices with a user interface built entirely with 
 - `npm run build` – create a production build
 - `npm start` – run the production server
 
-The backend connects to MySQL via the `mysql2` driver. If the database is unavailable, a stub pool is used so the app can still start.
+The backend connects to MySQL via the `mysql2` driver. By default it
+expects a MySQL server running locally with user **root** and no
+password. If that connection fails a stub pool is used so the app can
+still start. Adjust the credentials in `routes/settings.js` if your
+environment differs.
+To connect manually you can run `mysql -u root` in a terminal and
+create the `nh_printchecker` database if it does not exist.
 Server-side helpers in `routes/` are imported using the `@routes` alias configured in `next.config.js`. This alias points to the root `routes` folder so the modules can be statically imported from Next.js pages.
 
-Global styles are in `styles/` and loaded in `pages/_app.js`. The layout uses a light glass effect with a sidebar on the left. Each menu item shows an icon with a tooltip and the active item is highlighted in blue. At the bottom of the sidebar a small download link is followed by the user section that links to the `/user` page.
+Global styles are in `styles/` and loaded in `pages/_app.js`. Cards and the sidebar use a light glass effect while the page background stays solid. Menu entries combine icons and labels. A small user avatar sits at the bottom of the sidebar and links to the `/user` page.
 
 The interface uses these main colors:
 
@@ -21,6 +27,9 @@ The interface uses these main colors:
 - Titles: dark blue (`#003366`)
 
 The home page now serves as the dashboard. Breadcrumbs indicate where you are. The company selection page at `/societa` presents clickable cards for Elite, Pewex and Gruppo Stefanelli.
+
+The dashboard shows animated statistics and two sample charts built with
+`react-chartjs-2` and `react-circular-progressbar`.
 
 ### Authentication
 

@@ -56,8 +56,8 @@ h1, h2, h3 {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  position: relative;
+  justify-content: flex-start;
+  gap: 0.75rem;
   color: var(--text);
   text-decoration: none;
   padding: 0.75rem 1rem;
@@ -81,22 +81,8 @@ h1, h2, h3 {
 }
 
 .sidebar_item .label {
-  display: none;
-  position: absolute;
-  left: 110%;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #fff;
+  margin-left: 0.5rem;
   color: var(--text);
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-  white-space: nowrap;
-  box-shadow: var(--box-shadow);
-  z-index: 10;
-}
-
-.sidebar_item:hover .label {
-  display: block;
 }
 
 .user {
@@ -126,15 +112,9 @@ h1, h2, h3 {
   font-size: 0.9rem;
 }
 
-.download {
-  margin-top: auto;
-  margin-bottom: 1rem;
-}
-
 .main {
   flex: 1;
   padding: 2rem;
-  backdrop-filter: blur(8px);
 }
 
 .company_cards {
@@ -144,7 +124,7 @@ h1, h2, h3 {
 }
 
 .company_card {
-  background: #fff;
+  background: rgba(255,255,255,0.6);
   border: 1px solid #ddd;
   border-radius: 16px;
   padding: 1.5rem 2rem;
@@ -152,6 +132,7 @@ h1, h2, h3 {
   color: var(--text);
   font-weight: 600;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  backdrop-filter: blur(8px);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
@@ -200,11 +181,12 @@ h1, h2, h3 {
 
 .stat {
   flex: 1;
-  background: #fff;
+  background: rgba(255,255,255,0.6);
   border-radius: 16px;
   padding: 1rem;
   text-align: center;
   box-shadow: var(--box-shadow);
+  backdrop-filter: blur(8px);
 }
 
 .stat h2 {
@@ -225,10 +207,11 @@ h1, h2, h3 {
 }
 
 .graph {
-  background: #fff;
+  background: rgba(255,255,255,0.6);
   border-radius: 16px;
   height: 200px;
   box-shadow: var(--box-shadow);
+  backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
   justify-content: center;

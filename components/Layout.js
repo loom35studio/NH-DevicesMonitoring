@@ -13,7 +13,7 @@ export default function Layout({ children }) {
   const router = useRouter();
   return (
     <div className="dashboard">
-      <aside className="sidebar glass">
+      <aside className="sidebar">
         <div className="logo">NH Monitoring</div>
         <nav className="nav">
           <ul>
@@ -32,13 +32,9 @@ export default function Layout({ children }) {
             ))}
           </ul>
         </nav>
-        <a href="#" className="download sidebar_item" download>
-          <i className="fas fa-download" aria-hidden="true" />
-          <span className="label">Download</span>
-        </a>
         <Link href="/user" className="user">
           <img src="/images/background.svg" alt="User" className="avatar" />
-          <span className="username">Admin</span>
+          <span className="username">Nome Utente</span>
         </Link>
       </aside>
       <main className="main">
