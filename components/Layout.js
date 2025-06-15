@@ -32,6 +32,10 @@ export default function Layout({ children }) {
             ))}
           </ul>
         </nav>
+        <a href="#" className="download sidebar_item" download>
+          <i className="fas fa-download" aria-hidden="true" />
+          <span className="label">Download</span>
+        </a>
         <Link href="/user" className="user">
           <img src="/images/background.svg" alt="User" className="avatar" />
           <span className="username">Admin</span>

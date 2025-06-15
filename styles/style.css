@@ -1,9 +1,10 @@
 :root {
-  --bg: #e4eef6;
-  --sidebar-bg: rgba(255, 255, 255, 0.8);
-  --primary: #4aa3df;
-  --text: #333;
-  --active-bg: rgba(0, 0, 0, 0.1);
+  --bg: #F0F2F9; /* general background */
+  --sidebar-bg: #ffffff; /* sidebar background */
+  --primary: #0004ff; /* active elements */
+  --text: #003366; /* dark blue titles */
+  --text-secondary: #a3a4c4; /* secondary text */
+  --active-bg: rgba(0, 4, 255, 0.1);
   --box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
@@ -11,6 +12,10 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   background: var(--bg);
+  color: var(--text-secondary);
+}
+
+h1, h2, h3 {
   color: var(--text);
 }
 
@@ -51,7 +56,8 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: center;
+  position: relative;
   color: var(--text);
   text-decoration: none;
   padding: 0.75rem 1rem;
@@ -61,15 +67,36 @@ body {
 
 .sidebar_item:hover {
   background: var(--active-bg);
+  color: var(--primary);
 }
 
 .sidebar_item.active {
   background: var(--active-bg);
   font-weight: bold;
+  color: var(--primary);
 }
 
 .sidebar_item i {
   font-size: 1.2rem;
+}
+
+.sidebar_item .label {
+  display: none;
+  position: absolute;
+  left: 110%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  color: var(--text);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  box-shadow: var(--box-shadow);
+  z-index: 10;
+}
+
+.sidebar_item:hover .label {
+  display: block;
 }
 
 .user {
@@ -97,6 +124,11 @@ body {
 
 .user .username {
   font-size: 0.9rem;
+}
+
+.download {
+  margin-top: auto;
+  margin-bottom: 1rem;
 }
 
 .main {
@@ -158,4 +190,49 @@ body {
 .breadcrumbs { margin-bottom: 1rem; font-size: 0.9rem; }
 .breadcrumbs .crumb a { color: var(--text); text-decoration: none; }
 .breadcrumbs .crumb a:hover { text-decoration: underline; }
+
+/* Dashboard home */
+.dashboard_stats {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat {
+  flex: 1;
+  background: #fff;
+  border-radius: 16px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: var(--box-shadow);
+}
+
+.stat h2 {
+  margin: 0;
+  color: var(--primary);
+  font-size: 2rem;
+}
+
+.stat p {
+  margin: 0.5rem 0 0;
+  color: var(--text-secondary);
+}
+
+.dashboard_graphs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.graph {
+  background: #fff;
+  border-radius: 16px;
+  height: 200px;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+}
 
