@@ -11,8 +11,19 @@ This project monitors printer devices with a user interface built entirely with 
 The backend connects to MySQL via the `mysql2` driver. By default it
 expects a MySQL server running at **127.0.0.1:3306** with user
 **root** and no password. If that connection fails a stub pool is used
-so the app can still start. Adjust the credentials in
-`routes/settings.js` if your environment differs.
+so the app can still start.
+
+You can override these defaults using environment variables:
+
+```
+DB_HOST=localhost
+DB_PORT=3306
+DB_USER=root
+DB_PASS=
+DB_NAME=nh_printchecker
+```
+
+Adjust the credentials in your environment or `.env` file as needed.
 To connect manually you can run `mysql -u root` in a terminal and
 create the `nh_printchecker` database if it does not exist.
 Server-side helpers in `routes/` are imported using the `@routes` alias configured in `next.config.js`. This alias points to the root `routes` folder so the modules can be statically imported from Next.js pages.
